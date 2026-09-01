@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>カップルあれこれ | 公式Webマガジン</title>
+        
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+JP:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+        <!-- サイト全体の設定 (フォント・カラー) -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                            serif: ['"Noto Serif JP"', 'serif'],
+                            english: ['"Cormorant Garamond"', 'serif'],
+                            title: ['"Kiwi Maru"', 'serif'],
+                        },
+                        colors: {
+                            black: '#111111',
+                            gray: {
+                                50: '#fafafa',
+                                100: '#f5f5f5',
+                                900: '#1a1a1a',
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        
+        <!-- アニメーション等のスタイル -->
+        <style>
+            html { scroll-behavior: smooth; }
+            .fade-in { animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; opacity: 0; transform: translateY(20px); }
+            .delay-1 { animation-delay: 0.3s; }
+            .delay-2 { animation-delay: 0.6s; }
+            @keyframes fadeIn {
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .img-zoom { transition: transform 0.6s ease; }
+            .group:hover .img-zoom { transform: scale(1.05); }
+    
+            .reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.8s ease-out;
+            }
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+<body class="bg-gray-50 text-black font-sans antialiased selection:bg-black selection:text-white">
+    
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <div class="font-title font-medium text-xl tracking-wider">カップルあれこれ</div>
+            <div class="hidden md:flex gap-8 text-sm tracking-widest font-english">
+                <a href="index.html" class="text-gray-400 hover:text-black transition">GIFT</a>
+<a href="#" class="text-black font-bold">DATE</a>
+<a href="index.html" class="text-gray-400 hover:text-black transition">TIPS</a>
+            </div>
+            <div class="flex gap-4 text-lg">
+                <a href="https://www.tiktok.com/@couplearekore" target="_blank" class="hover:opacity-70 transition"><i class="fa-brands fa-tiktok"></i></a>
+                <!-- Instagramのリンクは一旦ダミーにしてあります -->
+            </div>
+        </div>
+    </nav>
+
+    
+
+    
+
+    <main class="max-w-3xl mx-auto px-6 py-12">
+        <div class="mb-12 text-center">
+            <span class="inline-block border border-black px-3 py-1 text-xs tracking-widest mb-4">DATE SPOT</span>
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">2026年関西の最新デートスポット5選</h1>
+            <p class="text-gray-600">今年の連休はどこに行く？絶対に外さない、関西の最新＆超人気デートスポットを<br>ランキング形式でご紹介します。</p>
+        </div>
+    
+        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden">
+            <img src="kyoto.jpg" alt="チームラボ バイオヴォルテックス 京都" class="w-full h-64 md:h-96 object-contain bg-gray-100">
+            <div class="p-6 md:p-8">
+                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第1位：光の迷宮に迷い込む没入体験</span>
+                <h3 class="text-2xl font-bold mb-4">1. チームラボ バイオヴォルテックス 京都</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">京都に誕生した常設のチームラボ。光と音が織りなす幻想的な空間は、どこを切り取っても「奇跡の1枚」が撮れます！スマホの容量を空けてから行くのがおすすめ◎</p>
+                <a href="#" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
+                    スポット詳細をチェックする
+                </a>
+            </div>
+        </div>
+    
+        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden">
+            <img src="awaji.jpg" alt="Awaji Earth Museum" class="w-full h-64 md:h-96 object-contain bg-gray-100">
+            <div class="p-6 md:p-8">
+                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第2位：淡路島エリアの新・映えスポット！</span>
+                <h3 class="text-2xl font-bold mb-4">2. Awaji Earth Museum</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">食・遊・憩が詰まった全天候型の複合施設。地元の絶品グルメを楽しんだ後は、<br>フォトスポットで最高の思い出を残しちゃおう♡</p>
+                <a href="#" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
+                    スポット詳細をチェックする
+                </a>
+            </div>
+        </div>
+    
+        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden">
+            <img src="kobe.jpg" alt="TOTTEI PARK" class="w-full h-64 md:h-96 object-contain bg-gray-100">
+            <div class="p-6 md:p-8">
+                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第3位：神戸の新しい海辺のシンボル</span>
+                <h3 class="text-2xl font-bold mb-4">3. TOTTEI PARK（トッテイパーク）</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">神戸港に誕生した階段状の「緑の丘」。夕暮れ時に海風を感じながら<br>2人で座っているだけで、エモすぎる映画のワンシーンに！</p>
+                <a href="#" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
+                    スポット詳細をチェックする
+                </a>
+            </div>
+        </div>
+    
+        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden">
+            <img src="nintendo.jpg" alt="ニンテンドーミュージアム" class="w-full h-64 md:h-96 object-contain bg-gray-100">
+            <div class="p-6 md:p-8">
+                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第4位：遊び心満載の大人デート体験</span>
+                <h3 class="text-2xl font-bold mb-4">4. ニンテンドーミュージアム</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">任天堂の歴史が詰まった体験型スポット！懐かしのゲームや巨大コントローラーで<br>協力プレイすれば、2人の距離がグッと縮まること間違いなし！</p>
+                <a href="#" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
+                    スポット詳細をチェックする
+                </a>
+            </div>
+        </div>
+    
+        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden">
+            <img src="osaka.jpg" alt="グラングリーン大阪" class="w-full h-64 md:h-96 object-contain bg-gray-100">
+            <div class="p-6 md:p-8">
+                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第5位：都会の真ん中でピクニック</span>
+                <h3 class="text-2xl font-bold mb-4">5. グラングリーン大阪（うめきた公園）</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">梅田のど真ん中に誕生した巨大な緑のオアシス。レジャーシートを広げて<br>スタバの新作を飲むだけで、最高に優雅なチルタイムが過ごせます♪</p>
+                <a href="#" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
+                    スポット詳細をチェックする
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-12 mt-12 text-center">
+        <p class="text-gray-400 text-sm font-serif">&copy; 2026 カップルあれこれ</p>
+    </footer>
+
+</body>
+</html>
