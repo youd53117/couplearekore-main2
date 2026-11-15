@@ -1,0 +1,8 @@
+# Secrets & local bridge config
+line-bridge/.env
+line-bridge/logs/
+line-bridge/__pycache__/
+
+# OS & editor files
+.DS_Store
+*.pyc
