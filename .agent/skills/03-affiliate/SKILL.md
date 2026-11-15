@@ -47,30 +47,34 @@ description: 記事作成ワークフローの第3工程（楽天アフィリエ
 
 ---
 
-## ステップ3: ハイブリッド画像選定＆フォールバック組み込み（建物外観フリー素材は全面禁止）
+## ステップ3: ハイブリッド画像・スポット表示ルール（建物外観フリー素材は全面禁止）
 
-スポット・グルメ・ホテル記事の画像は以下の優先順位で実装する。**単なるホテルや建物の外観写真（Wikimedia Commons等）をメイン画像に使うことは一切禁止**する。
+場所・店舗・施設を紹介する記事の「各スポット枠」は、必ず以下の **【A】と【B】の両方をセットで実装** する。**単なるホテルや建物の外観写真（Wikimedia Commons等）をメイン画像に使うことは一切禁止**する。
 
+### ■ A. メインビジュアル（以下の優先順位で1つ決定）
 1. **第1優先（ユーザーからInstagram投稿URLの指定がある場合）**:
-   - 指定されたURLをInstagram公式埋め込みコード（`<blockquote class="instagram-media" ...>` ＋ `<script async src="https://www.instagram.com/embed.js"></script>` 末尾1回）として記事内に配置する。
-2. **第2優先（URL指定がなく、楽天トラベル掲載ホテル内のレストラン・施設の場合）**:
-   - 楽天トラベルの該当施設ページから「食事・レストラン・コース料理・ラウンジ内観」の公式画像URL（`img.travel.rakuten.co.jp/...` 等）を取得・目視確認し、楽天アフィリエイトID（`526779c3.02e0dab7.526779c4.c2c3e62b`）を経由した**アフィリエイトリンク付き画像**として表示する。
+   - 指定されたURLをInstagram公式埋め込みコード（`<blockquote class="instagram-media" ...>` ＋ `<script async src="https://www.instagram.com/embed.js"></script>` 末尾1回）として配置する。
+2. **第2優先（URL指定がなく、楽天トラベル掲載施設の場合）**:
+   - 楽天トラベルの該当施設ページから「食事・レストラン・内観」の公式画像URL（`img.travel.rakuten.co.jp/...` 等）を取得・目視確認し、楽天アフィリエイトID（`526779c3.02e0dab7.526779c4.c2c3e62b`）を経由した**アフィリエイトリンク付き画像**として配置する。
    ```html
-   <a href="https://hb.afl.rakuten.co.jp/hgc/526779c3.02e0dab7.526779c4.c2c3e62b/?pc=エンコード済みホテルURL" target="_blank" rel="noopener noreferrer" class="block">
-       <img src="楽天トラベル公式の料理・内観画像URL" alt="店名・料理・空間" class="w-full h-64 md:h-96 object-cover bg-gray-100">
+   <a href="https://hb.afl.rakuten.co.jp/hgc/526779c3.02e0dab7.526779c4.c2c3e62b/?pc=エンコード済みホテルURL" target="_blank" rel="noopener noreferrer" class="block overflow-hidden">
+       <img src="楽天トラベル公式の料理・内観画像URL" alt="店名・料理・空間" class="w-full h-64 md:h-96 object-cover bg-gray-100 hover:scale-105 transition duration-500">
    </a>
    ```
-3. **第3優先（上記で料理・内観画像が取得できない場合）**:
-   - その店舗の料理ジャンルや空間ムード（鉄板焼きのステーキ調理シーン、ホテル最上階バーの夜景とカクテル、記念日コース料理など）が直感的に伝わる高画質な料理・内観イメージ写真（Unsplash等）を配置する。
-   - さらに黒CTAボタンの直上に **「📸 Instagramで実際の料理・店内写真を見る」**（Instagramの店名タグ検索等へのリンク）ボタンと、店舗情報枠への **Googleマップ埋め込み（`<iframe>`）** を必ずセットで配置する。
+3. **第3優先（上記で画像が取得できない場合）**:
+   - 料理ジャンルや空間ムード（鉄板焼きのステーキ調理シーン、ホテル最上階バーの夜景とカクテル、記念日コース料理など）が直感的に伝わる高画質な料理・内観イメージ写真（Unsplash等）を配置する。
+
+### ■ B. 全スポット共通の標準装備（Aでどれが選ばれた場合でも例外なく全項目に必ず設置）
+1. **店舗情報エリアへの「Googleマップ埋め込み（`<iframe>`）」の設置**（読者が位置関係をすぐ把握できるようにする）。
+2. **黒ボタン（「この施設の詳細を見る」）の直上に「📸 Instagramで実際の料理・店内写真を見る」（Instagramの店名タグ検索等へのリンク）ボタンを設置**（※すでにAの第1優先でインスタ公式埋め込み済みのスポットのみ省略可）。
    ```html
-   <!-- 店舗情報枠内 Googleマップ埋め込み -->
-   <div class="w-full h-56 md:h-64 rounded-lg overflow-hidden border border-gray-200 mb-6">
-       <iframe src="https://maps.google.com/maps?q=店舗名+エリア&output=embed" class="w-full h-full border-0" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <!-- 店舗情報枠内 Googleマップ埋め込み（全スポット必須） -->
+   <div class="mb-6 rounded-lg overflow-hidden border border-gray-200">
+       <iframe src="https://maps.google.com/maps?q=店舗名+エリア&t=&z=15&ie=UTF8&iwloc=&output=embed" class="w-full h-48 md:h-56" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="店舗名 Googleマップ"></iframe>
    </div>
-   <!-- 黒ボタン直上のInstagram検索ボタン -->
-   <a href="https://www.instagram.com/explore/tags/タグ名/" target="_blank" rel="noopener noreferrer" class="block w-full border-2 border-black bg-white hover:bg-gray-100 text-black text-center font-bold py-3 rounded-lg transition mb-3 text-sm md:text-base">
-       📸 Instagramで実際の料理・店内写真を見る <i class="fa-solid fa-arrow-up-right-from-square ml-1.5"></i>
+   <!-- 黒ボタン直上のInstagram検索ボタン（第1優先のインスタ公式埋め込み時のみ省略可） -->
+   <a href="https://www.instagram.com/explore/tags/タグ名/" target="_blank" rel="noopener noreferrer" class="block w-full border-2 border-black hover:bg-black hover:text-white text-black text-center font-bold py-3 rounded-lg transition text-sm md:text-base mb-3">
+       📸 Instagramで実際の料理・店内写真を見る <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
    </a>
    ```
 4. **`index.html` 用サムネイル（1:1正方形）生成**:

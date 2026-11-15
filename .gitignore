@@ -2,6 +2,7 @@
 line-bridge/.env
 line-bridge/logs/
 line-bridge/__pycache__/
+.preview_url.txt
 
 # OS & editor files
 .DS_Store
