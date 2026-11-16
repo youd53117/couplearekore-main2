@@ -3,177 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>名古屋周辺のゴロゴロデートできるスポット5選 | カップルあれこれ</title>
-
-    <!-- Tailwind CSS -->
+    <title>名古屋周辺のゴロゴロデートできるスポット5選 | カップルあれこれ 公式Webマガジン</title>
+    <meta name="description" content="インドア派カップル必見！TikTok動画で反響だった名古屋周辺のゴロゴロできるデートスポット（キャナルリゾート、久屋大通公園、ランプライトブックスホテル名古屋、モリコロパーク、RAKU SPA GARDEN）をランキング形式でご紹介。">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- サイト全体の設定（フォント・カラー） -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
                         serif: ['"Noto Serif JP"', 'serif'],
                         english: ['"Cormorant Garamond"', 'serif'],
-                        title: ['"Kiwi Maru"', 'serif'],
                     },
                     colors: {
+                        ecru: '#FAF8F5',
+                        charcoal: '#2E2C29',
+                        warmgray: '#757068',
+                        warmbeige: '#C5B49E',
+                        rosebeige: '#D4A59A',
+                        infobox: '#F3EFEA',
                         black: '#111111',
-                        gray: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            900: '#1a1a1a',
-                        }
                     }
                 }
             }
         }
     </script>
-
-    <!-- アニメーション等のスタイル -->
-    <style>
-        html { scroll-behavior: smooth; }
-        .fade-in { animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; opacity: 0; transform: translateY(20px); }
-        .delay-1 { animation-delay: 0.3s; }
-        .delay-2 { animation-delay: 0.6s; }
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
-<body class="bg-gray-50 text-black font-sans antialiased selection:bg-black selection:text-white">
+<body class="bg-ecru text-charcoal font-sans antialiased selection:bg-charcoal selection:text-white">
 
     <!-- ナビゲーション -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 md:px-6 flex justify-between items-center">
-            <a href="index.html" class="font-title font-medium text-sm md:text-xl tracking-wide">カップルあれこれ</a>
-            
-            <div class="flex gap-3 md:gap-8 text-[10px] md:text-sm tracking-widest font-english">
-                <a href="index.html#gift" class="hover:text-gray-500 transition">GIFT</a>
-                <a href="index.html#date" class="hover:text-gray-500 transition">DATE</a>
-                <a href="index.html#tips" class="hover:text-gray-500 transition">TIPS</a>
+    <nav class="editorial-nav sticky top-0 z-50 py-4 md:py-5">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="group flex flex-col">
+                <span class="site-logo font-serif text-lg md:text-2xl tracking-widest text-charcoal">カップルあれこれ</span>
+                <span class="font-en-label text-[9px] md:text-[10px] text-warmgray tracking-[0.22em] -mt-1">COUPLE AREKORE MAGAZINE</span>
+            </a>
+            <div class="flex items-center gap-4 md:gap-9 text-[11px] md:text-xs tracking-[0.18em] font-en-label text-charcoal">
+                <a href="index.html#pickup" class="hover:text-warmgray transition">PICK UP</a>
+                <a href="index.html#date" class="hover:text-warmgray transition">DATE</a>
+                <a href="index.html#gift" class="hover:text-warmgray transition">GIFT</a>
+                <a href="index.html#tips" class="hover:text-warmgray transition">MOVIE</a>
             </div>
-
-            <div class="flex gap-2 md:gap-4 text-base md:text-lg">
-                <a href="https://www.tiktok.com/@couplearekore" target="_blank" class="hover:opacity-70 transition"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
+            <a href="https://www.tiktok.com/@couplearekore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-charcoal hover:text-warmgray transition border border-[#EAE5DD] bg-white px-3 py-1.5 rounded-full">
+                <i class="fa-brands fa-tiktok text-sm"></i> <span class="hidden md:inline font-en-label text-[10px] tracking-widest">OFFICIAL TikTok</span>
+            </a>
         </div>
     </nav>
 
     <!-- メインコンテンツ -->
-    <main class="max-w-3xl mx-auto px-6 py-12 fade-in">
-        
-        <!-- タイトルエリア -->
-        <div class="mb-12 text-center">
-            <span class="inline-block border border-black px-3 py-1 text-xs tracking-widest mb-4 font-english">DATE SPOT</span>
-            <!-- スマホ版の文字サイズを text-2xl に縮小し、各1行で収まるように調整 -->
-            <h1 class="text-2xl md:text-4xl font-bold mb-4 leading-snug font-serif">
-                インドア派カップル必見！<br>
-                名古屋ゴロゴロデート5選
+    <main class="max-w-3xl mx-auto px-5 md:px-6 py-12 md:py-16 fade-in">
+        <header class="mb-14 md:mb-16 text-center">
+            <span class="editorial-tag mb-5">DATE SPOT / NAGOYA</span>
+            <h1 class="article-h1 text-2xl md:text-4xl font-normal mb-6 leading-relaxed font-serif text-charcoal">
+                インドア派カップル必見！<br>名古屋ゴロゴロデート5選
             </h1>
-            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-4">
+            <p class="text-warmgray text-sm md:text-base leading-[1.95] max-w-xl mx-auto mb-5">
                 休日はお出かけよりのんびりしたい？<br>
-                <!-- スマホ(md未満)の時だけ改行されるクラス(md:hidden)を使用していい感じの位置で区切る -->
                 TikTok動画で反響だった<br class="md:hidden">名古屋周辺のゴロゴロできるデートスポットを<br class="md:hidden">ランキング形式でご紹介！<br>
                 次のデート選びの参考にぜひ活用してみてね！
             </p>
-            <p class="text-[10px] text-gray-400 text-center mb-8">※本ページはプロモーションが含まれています</p>
-        </div>
+            <p class="text-xs text-warmgray text-center">※本ページはプロモーションが含まれています</p>
+        </header>
 
-        <!-- 第1位 キャナルリゾート (NEW) -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="canalresort.jpg" alt="キャナルリゾートのラウンジエリア" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：キャナルリゾート公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第1位: 1日中ダラダラできる！日本最大級の温泉＆サウナリゾート</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">1. キャナルリゾート（名古屋市中川区）</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">絶対に外さない最強のゴロゴロスポット！広大な岩盤浴ラウンジエリアには、カップルでくつろげるテントやハンモック、半個室の「おこもりスペース」が完備されています。数万冊のコミックを読みながら、時間を忘れて2人で無限にダラダラできちゃう天国のような空間です。</p>
-                <a href="https://canalresort.jp/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 01. キャナルリゾート -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="canalresort.jpg" alt="キャナルリゾートのラウンジエリア" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：キャナルリゾート公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 01</span>
+                        <span class="spot-catch">第1位: 1日中ダラダラできる！日本最大級の温泉＆サウナリゾート</span>
+                    </div>
+                    <h3 class="spot-title">キャナルリゾート（名古屋市中川区）</h3>
+                </div>
+                <p class="spot-description">
+                    絶対に外さない最強のゴロゴロスポット！広大な岩盤浴ラウンジエリアには、カップルでくつろげるテントやハンモック、半個室の「おこもりスペース」が完備されています。数万冊のコミックを読みながら、時間を忘れて2人で無限にダラダラできちゃう天国のような空間です。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>愛知県名古屋市中川区</li>
+                        <li><strong>特徴：</strong>広大な岩盤浴ラウンジ・テント・ハンモック・半個室おこもりスペース完備</li>
+                    </ul>
+                </div>
+                <a href="https://canalresort.jp/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
-        <!-- 第2位 久屋大通公園 -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="hisaya-odori.jpg" alt="久屋大通公園の風景" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：名古屋コンシェルジュ公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第2位: まさに都会の中のオアシス</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">2. 久屋大通公園（名古屋市中区）</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">南北1キロにわたる綺麗に整備された公園で、テレビ塔を見上げるロケーションが最高！芝生広場では定期的にテントやハンモックの貸し出しイベントなども行われており、テイクアウトしたカフェドリンクを片手にピクニック気分でゴロゴロくつろぐのにぴったりの場所です。</p>
-                <a href="https://rhp.nagoya/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 02. 久屋大通公園 -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="hisaya-odori.jpg" alt="久屋大通公園の風景" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：名古屋コンシェルジュ公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 02</span>
+                        <span class="spot-catch">第2位: まさに都会の中のオアシス</span>
+                    </div>
+                    <h3 class="spot-title">久屋大通公園（名古屋市中区）</h3>
+                </div>
+                <p class="spot-description">
+                    南北1キロにわたる綺麗に整備された公園で、テレビ塔を見上げるロケーションが最高！芝生広場では定期的にテントやハンモックの貸し出しイベントなども行われており、テイクアウトしたカフェドリンクを片手にピクニック気分でゴロゴロくつろぐのにぴったりの場所です。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>愛知県名古屋市中区（栄・久屋大通駅直結）</li>
+                        <li><strong>特徴：</strong>中部電力 MIRAI TOWER を望む芝生広場・カフェテイクアウト充実</li>
+                    </ul>
+                </div>
+                <a href="https://rhp.nagoya/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
-        <!-- 第3位 ランプライトブックスホテル名古屋 -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="lamplightbookshotel.jpg" alt="ランプライトブックスホテル名古屋" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：ランプライトブックスホテル公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第3位: 本の世界に没頭できるおしゃれホテル</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">3. ランプライトブックスホテル名古屋</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">「本の世界を旅するホテル」がコンセプトの非日常空間。1階には24時間営業のブックカフェがあり、ミステリーや旅に関する本などこだわりのラインナップが揃っています。好きな本を選んでお部屋に持ち込み、ふかふかのベッドでゴロゴロしながら読書デートが楽しめます。</p>
-                <a href="https://a.r10.to/hglzmt" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 03. ランプライトブックスホテル名古屋 -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="lamplightbookshotel.jpg" alt="ランプライトブックスホテル名古屋" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：ランプライトブックスホテル公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 03</span>
+                        <span class="spot-catch">第3位: 本の世界に没頭できるおしゃれホテル</span>
+                    </div>
+                    <h3 class="spot-title">ランプライトブックスホテル名古屋</h3>
+                </div>
+                <p class="spot-description">
+                    「本の世界を旅するホテル」がコンセプトの非日常空間。1階には24時間営業のブックカフェがあり、ミステリーや旅に関する本などこだわりのラインナップが揃っています。好きな本を選んでお部屋に持ち込み、ふかふかのベッドでゴロゴロしながら読書デートが楽しめます。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>愛知県名古屋市中区錦（伏見駅徒歩約3分）</li>
+                        <li><strong>特徴：</strong>24時間営業ブックカフェ併設・客室への書籍持ち込みOK</li>
+                    </ul>
+                </div>
+                <a href="https://a.r10.to/hglzmt" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
-        <!-- 第4位 愛・地球博記念公園 -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="morikoro.jpg" alt="愛・地球博記念公園" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：名古屋コンシェルジュ公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第4位: 愛知県最大の公園でのんびりデート</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">4. 愛・地球博記念公園 モリコロパーク</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">ジブリパークがあることでも有名な、愛知県最大級の広大な公園。大芝生広場は驚くほど広く、レジャーシートを広げてカップルでゆったりくつろげます。お弁当を持って行って、自然の風を感じながら青空の下でお昼寝するのが最高のリフレッシュになります。</p>
-                <a href="https://www.aichi-koen.com/moricoro/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 04. 愛・地球博記念公園 モリコロパーク -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="morikoro.jpg" alt="愛・地球博記念公園" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：名古屋コンシェルジュ公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 04</span>
+                        <span class="spot-catch">第4位: 愛知県最大の公園でのんびりデート</span>
+                    </div>
+                    <h3 class="spot-title">愛・地球博記念公園 モリコロパーク</h3>
+                </div>
+                <p class="spot-description">
+                    ジブリパークがあることでも有名な、愛知県最大級の広大な公園。大芝生広場は驚くほど広く、レジャーシートを広げてカップルでゆったりくつろげます。お弁当を持って行って、自然の風を感じながら青空の下でお昼寝するのが最高のリフレッシュになります。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>愛知県長久手市（リニモ「愛・地球博記念公園駅」すぐ）</li>
+                        <li><strong>特徴：</strong>広大な大芝生広場・ピクニック＆自然散策デートに最適</li>
+                    </ul>
+                </div>
+                <a href="https://www.aichi-koen.com/moricoro/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
-        <!-- 第5位 RAKU SPA GARDEN 名古屋 -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="rakuspa.jpg" alt="RAKU SPA GARDEN 名古屋" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：RAKU SPA GARDEN 名古屋公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第5位: 4万冊以上の漫画がある圧倒的リラックス空間</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">5. RAKU SPA GARDEN 名古屋</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">入館すればおしゃれな館内着で1日中過ごせるスパ施設。広い休憩エリアにはソファベッドや半個室の2段ボックスなど、とにかくゴロゴロできる場所が豊富に用意されています。お風呂に入ってすっぴん＆リラックス状態でくつろぐ、おこもりデートの大定番です。</p>
-                <a href="https://rakuspa.com/nagoya/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 05. RAKU SPA GARDEN 名古屋 -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="rakuspa.jpg" alt="RAKU SPA GARDEN 名古屋" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：RAKU SPA GARDEN 名古屋公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 05</span>
+                        <span class="spot-catch">第5位: 4万冊以上の漫画がある圧倒的リラックス空間</span>
+                    </div>
+                    <h3 class="spot-title">RAKU SPA GARDEN 名古屋</h3>
+                </div>
+                <p class="spot-description">
+                    入館すればおしゃれな館内着で1日中過ごせるスパ施設。広い休憩エリアにはソファベッドや半個室の2段ボックスなど、とにかくゴロゴロできる場所が豊富に用意されています。お風呂に入ってすっぴん＆リラックス状態でくつろぐ、おこもりデートの大定番です。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>愛知県名古屋市名東区（無料送迎バスあり）</li>
+                        <li><strong>特徴：</strong>コミック4万冊以上・ソファベッド＆半個室リラックススペース完備</li>
+                    </ul>
+                </div>
+                <a href="https://rakuspa.com/nagoya/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
+        <!-- 戻るボタン -->
+        <div class="mt-16 text-center">
+            <a href="index.html" class="inline-block bg-white border border-[#C5B49E] text-charcoal hover:bg-infobox transition px-10 py-4 rounded-full text-sm font-medium tracking-wider">
+                <i class="fa-solid fa-arrow-left mr-2"></i> 特集・記事一覧へ戻る
+            </a>
+        </div>
     </main>
 
     <!-- フッター -->
-    <footer class="bg-white border-t border-gray-200 py-8 text-center text-gray-500 text-xs font-english reveal">
-        <p>&copy; 2026 カップルあれこれ All rights reserved.</p>
+    <footer class="bg-white border-t border-[#EAE5DD] py-12 mt-12 text-center">
+        <p class="text-warmgray text-xs md:text-sm font-serif">&copy; 2026 カップルあれこれ</p>
     </footer>
 
     <!-- スクロールアニメーション用のJS -->
@@ -182,7 +234,7 @@
             const reveals = document.querySelectorAll(".reveal");
             const revealOnScroll = function() {
                 const windowHeight = window.innerHeight;
-                const elementVisible = 100;
+                const elementVisible = 50;
                 reveals.forEach((reveal) => {
                     const elementTop = reveal.getBoundingClientRect().top;
                     if (elementTop < windowHeight - elementVisible) {
@@ -191,7 +243,7 @@
                 });
             };
             window.addEventListener("scroll", revealOnScroll);
-            revealOnScroll(); 
+            revealOnScroll();
         });
     </script>
 </body>

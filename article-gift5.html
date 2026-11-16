@@ -1,201 +1,243 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>カップルあれこれ | 公式Webマガジン</title>
-        
-        <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+JP:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
-        <!-- FontAwesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-        <!-- サイト全体の設定 (フォント・カラー) -->
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        fontFamily: {
-                            sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
-                            serif: ['"Noto Serif JP"', 'serif'],
-                            english: ['"Cormorant Garamond"', 'serif'],
-                            title: ['"Kiwi Maru"', 'serif'],
-                        },
-                        colors: {
-                            black: '#111111',
-                            gray: {
-                                50: '#fafafa',
-                                100: '#f5f5f5',
-                                900: '#1a1a1a',
-                            }
-                        }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>予算1万円のセンス良すぎな実用ギフト5選 | カップルあれこれ 公式Webマガジン</title>
+    <meta name="description" content="記念日や誕生日に何をあげたらいいか分からない悩みを解決する、予算1万円以内で絶対に喜ばれるセンス抜群の実用ギフト5選（Diorハンドジェル、Jo Maloneリップ、Maison Margielaシャワージェル、THREEヘアミスト、SABONヘッドスクラブ）。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        serif: ['"Noto Serif JP"', 'serif'],
+                        english: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        ecru: '#FAF8F5',
+                        charcoal: '#2E2C29',
+                        warmgray: '#757068',
+                        warmbeige: '#C5B49E',
+                        rosebeige: '#D4A59A',
+                        infobox: '#F3EFEA',
+                        black: '#111111',
                     }
                 }
             }
-        </script>
-        
-        <!-- アニメーション等のスタイル -->
-        <style>
-            html { scroll-behavior: smooth; }
-            .fade-in { animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; opacity: 0; transform: translateY(20px); }
-            .delay-1 { animation-delay: 0.3s; }
-            .delay-2 { animation-delay: 0.6s; }
-            @keyframes fadeIn {
-                to { opacity: 1; transform: translateY(0); }
-            }
-            .img-zoom { transition: transform 0.6s ease; }
-            .group:hover .img-zoom { transform: scale(1.05); }
-    
-            .reveal {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: all 0.8s ease-out;
-            }
-            .reveal.active {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        </style>
-    </head>   
-<body class="bg-gray-50 text-black font-sans antialiased selection:bg-black selection:text-white">
-    
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 md:px-6 flex justify-between items-center">
-            
-            <a href="index.html" class="font-title font-medium text-sm md:text-xl tracking-wide">カップルあれこれ</a>
-            
-            <div class="flex gap-3 md:gap-8 text-[10px] md:text-sm tracking-widest font-english">
-                <a href="index.html#gift" class="hover:text-gray-500 transition">GIFT</a>
-                <a href="index.html#date" class="hover:text-gray-500 transition">DATE</a>
-                <a href="index.html#tips" class="hover:text-gray-500 transition">TIPS</a>
+        }
+    </script>
+</head>
+<body class="bg-ecru text-charcoal font-sans antialiased selection:bg-charcoal selection:text-white">
+
+    <!-- ナビゲーションバー -->
+    <nav class="editorial-nav sticky top-0 z-50 py-4 md:py-5">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="group flex flex-col">
+                <span class="site-logo font-serif text-lg md:text-2xl tracking-widest text-charcoal">カップルあれこれ</span>
+                <span class="font-en-label text-[9px] md:text-[10px] text-warmgray tracking-[0.22em] -mt-1">COUPLE AREKORE MAGAZINE</span>
+            </a>
+            <div class="flex items-center gap-4 md:gap-9 text-[11px] md:text-xs tracking-[0.18em] font-en-label text-charcoal">
+                <a href="index.html#pickup" class="hover:text-warmgray transition">PICK UP</a>
+                <a href="index.html#date" class="hover:text-warmgray transition">DATE</a>
+                <a href="index.html#gift" class="hover:text-warmgray transition">GIFT</a>
+                <a href="index.html#tips" class="hover:text-warmgray transition">MOVIE</a>
             </div>
-            
-            <div class="flex gap-2 md:gap-4 text-base md:text-lg">
-                <a href="https://www.tiktok.com/@couplearekore" target="_blank" class="hover:opacity-70 transition"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-            
+            <a href="https://www.tiktok.com/@couplearekore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-charcoal hover:text-warmgray transition border border-[#EAE5DD] bg-white px-3 py-1.5 rounded-full">
+                <i class="fa-brands fa-tiktok text-sm"></i> <span class="hidden md:inline font-en-label text-[10px] tracking-widest">OFFICIAL TikTok</span>
+            </a>
         </div>
     </nav>
 
-    <header class="max-w-4xl mx-auto px-6 pt-12 pb-8 text-center">
-        <span class="text-xs border border-black text-black px-3 py-1 tracking-wider inline-block mb-6">GIFT & PRESENT</span>
-        <h1 class="font-serif text-2xl md:text-4xl font-semibold leading-tight mb-4">予算1万円のセンス良すぎな<br class="block md:hidden">実用ギフト5選</h1>
-
+    <header class="max-w-3xl mx-auto px-5 md:px-6 pt-12 md:pt-16 pb-6 text-center fade-in">
+        <span class="editorial-tag mb-5">GIFT &amp; PRESENT / UNDER ¥10,000</span>
+        <h1 class="article-h1 font-serif text-2xl md:text-4xl font-normal leading-relaxed mb-5 text-charcoal">
+            予算1万円のセンス良すぎな<br class="block md:hidden">実用ギフト5選
         </h1>
-        <div class="flex items-center justify-center gap-4 text-sm text-gray-500 font-serif mb-8">
+        <div class="flex items-center justify-center gap-4 text-xs md:text-sm text-warmgray font-serif mb-4">
             <span>2026.08</span>
             <span>/</span>
-            <span>Gift & Pair Goods</span>
+            <span>Gift &amp; Pair Goods</span>
         </div>
+        <p class="text-[11px] md:text-xs text-warmgray">※本記事にはアフィリエイト広告（PR）が含まれています。</p>
     </header>
 
-</header>
-
-<!-- PR表記（ここに追加） -->
-<div class="max-w-3xl mx-auto px-6 mb-8 text-center">
-    <p class="text-[11px] md:text-xs text-gray-400">※本記事にはアフィリエイト広告（PR）が含まれています。</p>
-</div>
-
-<main class="max-w-3xl mx-auto px-6 pb-24">
-
-    <main class="max-w-3xl mx-auto px-6 pb-24">
-        <p class="text-lg text-gray-700 leading-relaxed mb-12">
-            「記念日や誕生日に何をあげたらいいか分からない…」そんな悩みを解決する、予算1万円以内で絶対に喜ばれるセンス抜群の実用ギフトをまとめました！<br>
-            TikTok（@couplearekore）でも「これ欲しかった！」と好評だった、<br>
-            本当におすすめできるアイテムたちです。
-        </p>
-
-        <div class="space-y-16">
-            
-            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                <img src="dior.jpg" alt="Dior ハンドジェル" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-                <div class="p-6 md:p-8">
-                    <span class="bg-black text-white text-[10px] tracking-wider font-bold px-2 py-1 rounded-sm mb-3 inline-block">バッグから出すたび気分が上がる</span>
-                    <h2 class="font-bold text-xl md:text-2xl mb-3">1. Dior ミス ディオール ハンド ジェル</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">手肌を清潔に保ちながらほのかなバラの香りが広がり、持っているだけで気分が上がる<br>名品です♪ パッケージも可愛く、女性へのプレゼントに迷ったらまずはこれ！</p>
-                    <a href="https://a.r10.to/h5N2Rh" target="_blank" class="block w-full bg-[#bf0000] hover:bg-red-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                        アイテムをチェックする
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                <img src="jomalone.jpeg" alt="Jo Malone リップ" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-                <div class="p-6 md:p-8">
-                    <span class="bg-black text-white text-[10px] tracking-wider font-bold px-2 py-1 rounded-sm mb-3 inline-block">メンズも使いやすい贅沢リップ</span>
-                    <h2 class="font-bold text-xl md:text-2xl mb-3">2. Jo Malone London リップ コンディショナー</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">乾燥から唇を優しく守るスタイリッシュな黒パケ。甘すぎないミントの香りが心地よく、男性にも大人気なんです！彼氏へのちょっとしたギフトにも最適◎</p>
-                    <a href="https://a.r10.to/h8FF01" target="_blank" class="block w-full bg-[#bf0000] hover:bg-red-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                        アイテムをチェックする
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                <img src="margiela.jpg" alt="Maison Margiela シャワージェル" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-                <div class="p-6 md:p-8">
-                    <span class="bg-black text-white text-[10px] tracking-wider font-bold px-2 py-1 rounded-sm mb-3 inline-block">毎日のバスタイムが高級ホテルに！？</span>
-                    <h2 class="font-bold text-xl md:text-2xl mb-3">3. Maison Margiela レプリカ シャワージェル</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">あの大人気香水「レイジーサンデーモーニング」の清潔感ある香りに包まれて、<br>しっとり洗い上がって最高に嬉しい♡ お風呂場が極上空間に変わります。</p>
-                    <a href="https://a.r10.to/hP93Vu" target="_blank" class="block w-full bg-[#bf0000] hover:bg-red-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                        アイテムをチェックする
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                <img src="three.jpg" alt="THREE ヘアミスト" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-                <div class="p-6 md:p-8">
-                    <span class="bg-black text-white text-[10px] tracking-wider font-bold px-2 py-1 rounded-sm mb-3 inline-block">髪からふんわり自然に香る</span>
-                    <h2 class="font-bold text-xl md:text-2xl mb-3">4. THREE スタイリング オイル イン ミスト</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">精油100%の極上の香りで髪のパサつきを抑える最新ヘアミスト♪ 男女問わずユニセックスで使えるので、2人でシェアするのもおすすめです！</p>
-                    <a href="https://a.r10.to/h8LGvc" target="_blank" class="block w-full bg-[#bf0000] hover:bg-red-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                        アイテムをチェックする
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                <img src="sabon.jpg" alt="SABON ヘッドスクラブ" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-                <div class="p-6 md:p-8">
-                    <span class="bg-black text-white text-[10px] tracking-wider font-bold px-2 py-1 rounded-sm mb-3 inline-block">週に1回の贅沢！おうちで極上ヘッドスパ</span>
-                    <h2 class="font-bold text-xl md:text-2xl mb-3">5. SABON ヘッドスクラブ</h2>
-                    <p class="text-gray-700 leading-relaxed mb-6">週に一度のケアで頭皮がすっきり軽くなり、驚くほど髪がサラサラに仕上がる<br>感動のヘアケア。週末の疲れを癒やす、最高のバスタイムギフトです！</p>
-                    <a href="https://a.r10.to/h57cjQ" target="_blank" class="block w-full bg-[#bf0000] hover:bg-red-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                        アイテムをチェックする
-                    </a>
-                </div>
-            </div>
-
+    <main class="max-w-3xl mx-auto px-5 md:px-6 pb-20 md:pb-24">
+        <div class="bg-white border border-[#EAE5DD] rounded-xl p-6 md:p-8 mb-12 text-sm md:text-base text-charcoal leading-[1.9]">
+            <p>
+                「記念日や誕生日に何をあげたらいいか分からない…」そんな悩みを解決する、予算1万円以内で絶対に喜ばれるセンス抜群の実用ギフトをまとめました！<br>
+                TikTok（@couplearekore）でも「これ欲しかった！」と好評だった、本当におすすめできるアイテムたちです。
+            </p>
         </div>
-        
-<!-- TikTok動画エリア -->
-<div class="mt-20 bg-white p-6 md:p-8 rounded-xl border border-gray-200 shadow-sm text-center">
-    <h3 class="font-bold text-xl mb-3">🎥 今回紹介したアイテムを動画で一気見！</h3>
-    <p class="text-sm text-gray-600 mb-6">TikTokでも「センスいい！」と好評だったまとめ動画です。<br>お買い物の前にぜひチェックしてみてください。</p>
-    
-    <!-- 👇この下の行にTikTokのコードを貼り付けます👇 -->
-    <div class="flex justify-center w-full overflow-hidden">
-        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@couplearekore/video/7657153957680270612" data-video-id="7657153957680270612" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@couplearekore" href="https://www.tiktok.com/@couplearekore?refer=embed">@couplearekore</a> 今回は予算1万円以内で手に入る、憧れハイブランドの「実用性抜群」なアイテムをまとめました！　<a title="カップル" target="_blank" href="https://www.tiktok.com/tag/%E3%82%AB%E3%83%83%E3%83%97%E3%83%AB?refer=embed">#カップル</a> <a title="プレゼント" target="_blank" href="https://www.tiktok.com/tag/%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88?refer=embed">#プレゼント</a> <a title="記念日プレゼント" target="_blank" href="https://www.tiktok.com/tag/%E8%A8%98%E5%BF%B5%E6%97%A5%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88?refer=embed">#記念日プレゼント</a> <a title="ギフト" target="_blank" href="https://www.tiktok.com/tag/%E3%82%AE%E3%83%95%E3%83%88?refer=embed">#ギフト</a> <a target="_blank" title="♬ ハミング - 幾田りら" href="https://www.tiktok.com/music/ハミング-7372060002720712721?refer=embed">♬ ハミング - 幾田りら</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-        
-    </div>
-</div>
+
+        <!-- SPOT 01. Dior -->
+        <article class="editorial-card">
+            <div class="editorial-media-wrap">
+                <img src="dior.jpg" alt="Dior ハンドジェル" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 01</span>
+                        <span class="spot-catch">バッグから出すたび気分が上がる</span>
+                    </div>
+                    <h2 class="spot-title">Dior ミス ディオール ハンド ジェル</h2>
+                </div>
+                <p class="spot-description">
+                    手肌を清潔に保ちながらほのかなバラの香りが広がり、持っているだけで気分が上がる名品です♪ パッケージも可愛く、女性へのプレゼントに迷ったらまずはこれ！
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>予算目安：</strong><span class="editorial-price">予算1万円以内（ハイブランド実用コスメ）</span></li>
+                        <li><strong>おすすめシーン：</strong>彼女の誕生日・ちょっとした記念日・お礼ギフト</li>
+                    </ul>
+                </div>
+                <a href="https://a.r10.to/h5N2Rh" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この商品の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- SPOT 02. Jo Malone -->
+        <article class="editorial-card">
+            <div class="editorial-media-wrap">
+                <img src="jomalone.jpeg" alt="Jo Malone リップ" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 02</span>
+                        <span class="spot-catch">メンズも使いやすい贅沢リップ</span>
+                    </div>
+                    <h2 class="spot-title">Jo Malone London リップ コンディショナー</h2>
+                </div>
+                <p class="spot-description">
+                    乾燥から唇を優しく守るスタイリッシュな黒パケ。甘すぎないミントの香りが心地よく、男性にも大人気なんです！彼氏へのちょっとしたギフトにも最適◎
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>予算目安：</strong><span class="editorial-price">予算1万円以内（ユニセックス対応）</span></li>
+                        <li><strong>おすすめシーン：</strong>彼氏・彼女どちらにも贈りやすい贅沢リップケア</li>
+                    </ul>
+                </div>
+                <a href="https://a.r10.to/h8FF01" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この商品の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- SPOT 03. Maison Margiela -->
+        <article class="editorial-card">
+            <div class="editorial-media-wrap">
+                <img src="margiela.jpg" alt="Maison Margiela シャワージェル" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 03</span>
+                        <span class="spot-catch">毎日のバスタイムが高級ホテルに！？</span>
+                    </div>
+                    <h2 class="spot-title">Maison Margiela レプリカ シャワージェル</h2>
+                </div>
+                <p class="spot-description">
+                    あの大人気香水「レイジーサンデーモーニング」の清潔感ある香りに包まれて、しっとり洗い上がって最高に嬉しい♡ お風呂場が極上空間に変わります。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>予算目安：</strong><span class="editorial-price">予算1万円以内（バス＆ボディケア）</span></li>
+                        <li><strong>おすすめシーン：</strong>おうち時間を格上げするユニセックスなご褒美ギフト</li>
+                    </ul>
+                </div>
+                <a href="https://a.r10.to/hP93Vu" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この商品の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- SPOT 04. THREE -->
+        <article class="editorial-card">
+            <div class="editorial-media-wrap">
+                <img src="three.jpg" alt="THREE ヘアミスト" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 04</span>
+                        <span class="spot-catch">髪からふんわり自然に香る</span>
+                    </div>
+                    <h2 class="spot-title">THREE スタイリング オイル イン ミスト</h2>
+                </div>
+                <p class="spot-description">
+                    精油100%の極上の香りで髪のパサつきを抑える最新ヘアミスト♪ 男女問わずユニセックスで使えるので、2人でシェアするのもおすすめです！
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>予算目安：</strong><span class="editorial-price">予算1万円以内（天然精油ヘアケア）</span></li>
+                        <li><strong>おすすめシーン：</strong>同棲カップルでのシェア美容・ナチュラル派への贈り物</li>
+                    </ul>
+                </div>
+                <a href="https://a.r10.to/h8LGvc" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この商品の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- SPOT 05. SABON -->
+        <article class="editorial-card">
+            <div class="editorial-media-wrap">
+                <img src="sabon.jpg" alt="SABON ヘッドスクラブ" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 05</span>
+                        <span class="spot-catch">週に1回の贅沢！おうちで極上ヘッドスパ</span>
+                    </div>
+                    <h2 class="spot-title">SABON ヘッドスクラブ</h2>
+                </div>
+                <p class="spot-description">
+                    週に一度のケアで頭皮がすっきり軽くなり、驚くほど髪がサラサラに仕上がる感動のヘアケア。週末の疲れを癒やす、最高のバスタイムギフトです！
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>予算目安：</strong><span class="editorial-price">予算1万円以内（スペシャル頭皮ケア）</span></li>
+                        <li><strong>おすすめシーン：</strong>お仕事を頑張る恋人へのリフレッシュギフト</li>
+                    </ul>
+                </div>
+                <a href="https://a.r10.to/h57cjQ" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この商品の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                </a>
+            </div>
+        </article>
+
+        <!-- TikTok動画エリア -->
+        <div class="mt-16 bg-white p-6 md:p-8 rounded-xl border border-[#EAE5DD] text-center">
+            <h3 class="font-serif text-xl mb-3 text-charcoal">🎥 今回紹介したアイテムを動画で一気見！</h3>
+            <p class="text-sm text-warmgray mb-6">TikTokでも「センスいい！」と好評だったまとめ動画です。<br>お買い物の前にぜひチェックしてみてください。</p>
+            <div class="flex justify-center w-full overflow-hidden">
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@couplearekore/video/7657153957680270612" data-video-id="7657153957680270612" style="max-width: 605px;min-width: 325px;">
+                    <section><a target="_blank" title="@couplearekore" href="https://www.tiktok.com/@couplearekore?refer=embed">@couplearekore</a> 今回は予算1万円以内で手に入る、憧れハイブランドの「実用性抜群」なアイテムをまとめました！</section>
+                </blockquote>
+            </div>
+        </div>
 
         <div class="mt-16 text-center">
-            <a href="index.html" class="inline-block border-2 border-black px-8 py-3 font-bold hover:bg-black hover:text-white transition">
-                <i class="fa-solid fa-arrow-left mr-2"></i> 記事一覧に戻る
+            <a href="index.html" class="inline-block bg-white border border-[#C5B49E] text-charcoal hover:bg-infobox transition px-10 py-4 rounded-full text-sm font-medium tracking-wider">
+                <i class="fa-solid fa-arrow-left mr-2"></i> 特集・記事一覧へ戻る
             </a>
         </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-200 py-12 mt-12 text-center">
-        <p class="text-gray-400 text-sm font-serif">&copy; 2026 カップルあれこれ</p>
+    <footer class="bg-white border-t border-[#EAE5DD] py-12 mt-12 text-center">
+        <p class="text-warmgray text-xs md:text-sm font-serif">&copy; 2026 カップルあれこれ</p>
     </footer>
 
+    <script async src="https://www.tiktok.com/embed.js"></script>
 </body>
 </html>

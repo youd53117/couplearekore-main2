@@ -1,346 +1,635 @@
 <!DOCTYPE html>
-<html lang="ja" style="scroll-padding-top: 120px;">
+<html lang="ja" style="scroll-padding-top: 96px;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>カップルあれこれ | 公式Webマガジン</title>
-    
+    <title>カップルあれこれ | 公式Webマガジン — デート・記念日ディナー・ペアギフト特集</title>
+    <meta name="description" content="2人の毎日をもっと特別に。カップルあれこれ公式Webマガジンでは、記念日ディナー、週末デートスポット、失敗しない誕生日・クリスマスギフト特集をお届けします。">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
+
+    <!-- Google Fonts (Noto Serif JP / Noto Sans JP / Cormorant Garamond) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+JP:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- サイト全体の設定 (フォント・カラー) -->
+    <!-- Common Editorial Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
                         serif: ['"Noto Serif JP"', 'serif'],
                         english: ['"Cormorant Garamond"', 'serif'],
-                        title: ['"Kiwi Maru"', 'serif'],
                     },
                     colors: {
+                        ecru: '#FAF8F5',
+                        charcoal: '#2E2C29',
+                        warmgray: '#757068',
+                        warmbeige: '#C5B49E',
+                        rosebeige: '#D4A59A',
+                        infobox: '#F3EFEA',
                         black: '#111111',
-                        gray: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            900: '#1a1a1a',
-                        }
                     }
                 }
             }
         }
     </script>
-    
-    <!-- アニメーション等のスタイル -->
-    <style>
-        html { scroll-behavior: smooth; }
-        .fade-in { animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; opacity: 0; transform: translateY(20px); }
-        .delay-1 { animation-delay: 0.3s; }
-        .delay-2 { animation-delay: 0.6s; }
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .img-zoom { transition: transform 0.6s ease; }
-        .group:hover .img-zoom { transform: scale(1.05); }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
-<body class="bg-gray-50 text-black font-sans antialiased selection:bg-black selection:text-white">
+<body class="bg-ecru text-charcoal font-sans antialiased selection:bg-charcoal selection:text-white">
 
     <!-- ============================================== -->
-    <!-- 1. ヒーローエリア (一番最初の大きな画像とタイトル) -->
+    <!-- 1. ナビゲーションバー (FUDGE × OZmall 風エアリーヘッダー) -->
     <!-- ============================================== -->
-    <header class="relative w-full h-[85vh] md:h-screen flex flex-col justify-center items-center overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black z-0">
-            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2000&auto=format&fit=crop" alt="Hero Image" class="w-full h-full object-cover opacity-60">
-        </div>
-        
-        <div class="relative z-10 text-center text-white px-4 fade-in">
-            <p class="font-english italic text-2xl md:text-3xl mb-4 tracking-widest text-gray-300">Make every moment special.</p>
-            <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl font-semibold tracking-wide leading-tight">
-                2人の毎日を、<br class="md:hidden">もっと特別に。
-            </h1>
-        </div>
-        
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center fade-in delay-2 z-10">
-            <span class="text-white text-xs tracking-widest mb-2 font-english"></span>
-            
-        </div>
-    </header>
+    <nav class="editorial-nav sticky top-0 z-50 py-4 md:py-5">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 flex justify-between items-center">
+            <a href="#" class="group flex flex-col">
+                <span class="site-logo font-serif text-lg md:text-2xl tracking-widest text-charcoal">カップルあれこれ</span>
+                <span class="font-en-label text-[9px] md:text-[10px] text-warmgray tracking-[0.22em] -mt-1">COUPLE AREKORE MAGAZINE</span>
+            </a>
 
-    <!-- ============================================== -->
-    <!-- 2. ナビゲーションバー (メニュー) -->
-    <!-- ============================================== -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 md:px-6 flex justify-between items-center">
-            
-            <a href="#" class="font-title font-medium text-sm md:text-xl tracking-wide">カップルあれこれ</a>
-            
-            <div class="flex gap-3 md:gap-8 text-[10px] md:text-sm tracking-widest font-english">
-                <a href="#gift" class="hover:text-gray-500 transition">GIFT</a>
-                <a href="#date" class="hover:text-gray-500 transition">DATE</a>
-                <a href="#tips" class="hover:text-gray-500 transition">TIPS</a>
+            <div class="flex items-center gap-4 md:gap-9 text-[11px] md:text-xs tracking-[0.18em] font-en-label text-charcoal">
+                <a href="#pickup" class="hover:text-warmgray transition">PICK UP</a>
+                <a href="#date" data-nav-filter="date" class="hover:text-warmgray transition">DATE</a>
+                <a href="#gift" data-nav-filter="gift" class="hover:text-warmgray transition">GIFT</a>
+                <a href="#dinner" data-nav-filter="dinner" class="hidden sm:inline hover:text-warmgray transition">DINNER</a>
+                <a href="#tips" class="hover:text-warmgray transition">MOVIE</a>
             </div>
-            
-            <div class="flex gap-2 md:gap-4 text-base md:text-lg">
-                <a href="https://www.tiktok.com/@couplearekore" target="_blank" class="hover:opacity-70 transition"><i class="fa-brands fa-tiktok"></i></a>
+
+            <div class="flex items-center gap-3">
+                <a href="https://www.tiktok.com/@couplearekore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-charcoal hover:text-warmgray transition border border-[#EAE5DD] bg-white px-3 py-1.5 rounded-full">
+                    <i class="fa-brands fa-tiktok text-sm"></i>
+                    <span class="hidden md:inline font-en-label text-[10px] tracking-widest">OFFICIAL TikTok</span>
+                </a>
             </div>
-            
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-24 md:space-y-32">
+    <!-- ============================================== -->
+    <!-- 2. 雑誌カバー風 エディトリアル・イントロ -->
+    <!-- ============================================== -->
+    <header class="max-w-6xl mx-auto px-5 md:px-8 pt-8 md:pt-12 pb-6 md:pb-10 fade-in">
+        <div class="bg-white border border-[#EAE5DD] rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+            <div class="lg:col-span-7 relative aspect-[16/11] lg:aspect-auto lg:min-h-[440px] overflow-hidden bg-infobox">
+                <div class="hero-slideshow" aria-label="カップルあれこれ 特集スライドショー">
+                    <div class="hero-slide">
+                        <img src="maihama.jpg" alt="記念日ディナー特集">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="Jo Malone London.jpg" alt="フレグランス＆ギフト特集">
+                    </div>
+                    <div class="hero-slide">
+                        <img src="yokohama.jpg" alt="横浜・みなとみらいデート特集">
+                    </div>
+                </div>
+                <div class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded text-[11px] font-en-label tracking-[0.2em] text-charcoal">
+                    ISSUE 2026 — FOR TWO OF US
+                </div>
+            </div>
+            <div class="lg:col-span-5 p-7 md:p-10 lg:p-12 flex flex-col justify-center bg-white">
+                <p class="font-en-label text-xs text-warmbeige tracking-[0.22em] mb-3">MAKE EVERY MOMENT SPECIAL</p>
+                <h1 class="font-serif text-2xl md:text-3xl lg:text-4xl font-normal leading-relaxed text-charcoal mb-5">
+                    2人の毎日を、<br>もっと特別に。
+                </h1>
+                <p class="text-sm text-warmgray leading-[1.95] mb-7">
+                    次の休日に出かけたいデートスポットから、記念日・誕生日に贈りたい特別なギフト、少し背伸びしたい夜のホテルディナーまで。2人の時間を心地よく彩るアイデアを雑誌をめくるようにお届けします。
+                </p>
+                <div class="flex flex-wrap gap-2.5 pt-2 border-t border-[#EAE5DD]">
+                    <a href="#articles" data-nav-filter="all" class="text-xs text-charcoal bg-infobox hover:bg-[#E7E1D8] px-3.5 py-1.5 rounded-full transition"># 特集一覧を見る</a>
+                    <a href="article-maihama.html" class="text-xs text-charcoal bg-infobox hover:bg-[#E7E1D8] px-3.5 py-1.5 rounded-full transition"># 舞浜ディナー5選</a>
+                    <a href="article-boyfriend-xmas-gift5.html" class="text-xs text-charcoal bg-infobox hover:bg-[#E7E1D8] px-3.5 py-1.5 rounded-full transition"># クリスマスギフト</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-5 md:px-8 py-10 md:py-16 space-y-20 md:space-y-28">
 
         <!-- ============================================== -->
-        <!-- 3. メインコンテンツ：GIFT & PAIR GOODS (ハイブリッド型) -->
+        <!-- 3. PICK UP 特集（OZmall × FUDGE 注目の3大特集） -->
         <!-- ============================================== -->
-        <section id="gift" class="scroll-mt-24 reveal">
-            <div class="mb-12 md:mb-20 text-center border-b border-gray-200 pb-10">
-                <h2 class="font-english text-4xl md:text-6xl italic tracking-wider mb-3">Gift & Pair Goods</h2>
-                <p class="font-serif text-sm text-gray-500 tracking-widest">もらって嬉しい、お揃いギフト</p>
+        <section id="pickup" class="scroll-mt-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-10 pb-4 border-b border-[#EAE5DD]">
+                <div>
+                    <span class="font-en-label text-xs text-warmbeige tracking-[0.22em] block mb-1">SEASONAL PICK UP</span>
+                    <h2 class="font-serif text-2xl md:text-3xl text-charcoal">今月のピックアップ特集</h2>
+                </div>
+                <p class="text-xs md:text-sm text-warmgray mt-2 md:mt-0">記念日ディナー・冬のペアギフト・クリスマス特集</p>
             </div>
 
-            
-
-            <!-- ▼ ブログ風 深掘り記事エリア ▼ -->
-            <div>
-                <h3 class="font-serif text-xl md:text-2xl font-semibold mb-8 flex items-center gap-2">
-                    <i class="fa-solid fa-pen-nib text-black"></i> Detailed Reviews
-                </h3>
-
-                <div class="space-y-12">
-                    <!-- 記事1（アリバのネックレス） -->
-                    <article class="bg-white p-6 md:p-8 border border-gray-200 flex flex-col md:flex-row gap-8 items-center shadow-sm">
-                        <div class="w-full md:w-2/5 overflow-hidden">
-                            <img src="alibaring.png" class="w-full h-auto object-cover img-zoom" alt="ペアネックレス">
-                        </div>
-                        <div class="w-full md:w-3/5 space-y-4">
-                            <span class="text-xs bg-black text-white px-3 py-1 tracking-wider inline-block">REVIEW</span>
-                            <h4 class="font-serif text-xl md:text-2xl font-semibold leading-relaxed">
-                                リングの刻印がエモい。<br class="block md:hidden">アリバのサージカルステンレス製<br class="block md:hidden">ペアネックレス徹底解説
-                            </h4>
-                            <p class="text-sm text-gray-600 leading-relaxed">
-                                「金属アレルギーだけど、お揃いのアクセサリーが着けたい…」そんな悩みを解決してくれるのがサージカルステンレス。お風呂でもつけっぱなしOKで、大人っぽいデザインが魅力です。動画では伝えきれなかった刻印の詳細や、実際のサイズ感について詳しくまとめました。
-                            </p>
-                            <div class="pt-4">
-                                <!-- GitHubなどで複数ページ構成にした場合は、ここのhrefを "article-aliba.html" 等に変更します -->
-                                <a href="article-aliba.html" class="inline-block bg-red-500 hover:bg-red-600 text-white text-sm font-semibold px-6 py-3 rounded transition shadow-sm">
-    <i class="fa-solid fa-file-lines mr-2"></i> 詳細を見る
-</a>
-                            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 md:gap-8">
+                <!-- メイン PICK UP: 舞浜ディナー5選 -->
+                <a href="article-maihama.html" class="lg:col-span-7 magazine-card group">
+                    <div class="magazine-card-img-wrap aspect-[16/10]">
+                        <img src="maihama.jpg" alt="記念日に使える！舞浜おしゃれディナー5選">
+                        <span class="absolute top-4 left-4 bg-charcoal text-white text-[10px] font-en-label tracking-[0.18em] px-3 py-1 rounded">
+                            PICK UP 01 / DINNER &amp; HOTEL
+                        </span>
+                    </div>
+                    <div class="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 text-xs text-warmgray mb-2.5">
+                                <span class="editorial-tag">ディナー・ホテル</span>
+                                <span>千葉・舞浜エリア</span>
                             </div>
+                            <h3 class="font-serif text-xl md:text-2xl text-charcoal leading-relaxed mb-3 group-hover:text-warmgray transition">
+                                記念日に使える！舞浜おしゃれディナー5選
+                            </h3>
+                            <p class="text-sm text-warmgray leading-[1.85]">
+                                シェラトンの極上鉄板焼やヒルトンのモダンなバーラウンジ、イクスピアリの本格シュラスコまで。パーク帰りや誕生日に予約したい特別な5軒を厳選。
+                            </p>
                         </div>
-                    </article>
-
-                    <!-- 新着記事：恋人が本気で喜ぶ褒められ香水5選 -->
-    <article class="bg-white p-6 md:p-8 border border-gray-200 flex flex-col md:flex-row gap-8 items-center shadow-sm">
-        <div class="w-full md:w-2/5 overflow-hidden relative rounded-xl">
-            <!-- サムネイル画像：今回はJo Maloneの画像を入れていますがお好みで変更してください -->
-            <img src="Jo Malone London.jpg" alt="恋人が本気で喜ぶ褒められ香水5選" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="w-full md:w-3/5 space-y-4">
-            <span class="text-xs border border-black text-black px-3 py-1 tracking-wider inline-block">GIFT & PRESENT</span>
-            <h4 class="font-serif text-xl md:text-2xl font-semibold leading-relaxed">
-                恋人が本気で喜ぶ<br class="block md:hidden">褒められ香水5選<br>
-                <span class="text-base text-gray-700 mt-1 inline-block">（絶対に外さない大本命ギフト）</span>
-            </h4>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                「恋人からもらって本当に嬉しかった」「周りから褒められた」と絶賛される、至極の香水を厳選。SHIROやJo Maloneなど、センス抜群のアイテムをご紹介します。
-            </p>
-            <div class="pt-4">
-                <!-- hrefの中身は今回作成した香水記事のHTMLファイル名に合わせてください -->
-                <a href="article-perfume5.html" class="inline-block border border-black hover:bg-black hover:text-white text-black transition px-6 py-2 text-sm font-semibold">
-                    記事を読む <i class="fa-solid fa-arrow-right ml-1"></i>
+                        <div class="mt-6 pt-4 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                            <span>特集記事を読む</span>
+                            <i class="fa-solid fa-arrow-right text-warmbeige group-hover:translate-x-1 transition"></i>
+                        </div>
+                    </div>
                 </a>
-            </div>
-        </div>
-    </article>
 
-                    <article class="bg-white p-6 md:p-8 border border-gray-200 flex flex-col md:flex-row gap-8 items-center shadow-sm">
-                        <div class="w-full md:w-2/5 overflow-hidden relative rounded-xl">
-                            <img src="gift-cover.jpg" alt="予算1万円実用ギフト" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
-                            
-                        </div>
-                        <div class="w-full md:w-3/5 space-y-4">
-                            <span class="text-xs border border-black text-black px-3 py-1 tracking-wider inline-block">GIFT & PRESENT</span>
-                            <h4 class="font-serif text-xl md:text-2xl font-semibold leading-relaxed">
-                                予算1万円のセンス良すぎな<br class="block md:hidden">実用ギフト5選
-                            </h4>
-                            <p class="text-sm text-gray-600 leading-relaxed">
-                                DiorのハンドジェルやSABONのヘッドスクラブなど、男女問わず喜ばれる絶対外さない実用品を厳選紹介。
-                            </p>
-                            <div class="pt-4">
-                                <a href="article-gift5.html" class="inline-block border border-black hover:bg-black hover:text-white text-black text-sm font-bold px-6 py-3 transition">
-                                    記事を読む <i class="fa-solid fa-arrow-right ml-1"></i>
-                                </a>
+                <!-- サブ PICK UP 2本 -->
+                <div class="lg:col-span-5 flex flex-col gap-7 md:gap-8">
+                    <!-- PICK UP 02: 彼氏クリスマスプレゼント -->
+                    <a href="article-boyfriend-xmas-gift5.html" class="magazine-card group flex-1">
+                        <div class="grid grid-cols-1 sm:grid-cols-12 h-full">
+                            <div class="sm:col-span-5 relative aspect-[4/3] sm:aspect-auto overflow-hidden bg-infobox">
+                                <img src="xmas-gift-ilbisonte.jpg" alt="彼氏が本気で喜ぶクリスマスプレゼント5選" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            </div>
+                            <div class="sm:col-span-7 p-5 md:p-6 flex flex-col justify-between">
+                                <div>
+                                    <span class="editorial-tag mb-2.5">ギフト特集</span>
+                                    <h3 class="font-serif text-base md:text-lg text-charcoal leading-snug mb-2 group-hover:text-warmgray transition">
+                                        彼氏が本気で喜ぶクリスマスプレゼント5選（予算2万円）
+                                    </h3>
+                                    <p class="text-xs text-warmgray leading-relaxed line-clamp-3">
+                                        Paul SmithのマフラーやIL BISONTEのキーケース、マルジェラ香水など実用性と特別感を兼ね備えた名品。
+                                    </p>
+                                </div>
+                                <div class="mt-4 pt-3 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                    <span>記事を読む</span>
+                                    <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                                </div>
                             </div>
                         </div>
-                    </article>
-                    <article class="bg-white p-6 md:p-8 border border-gray-200 flex flex-col md:flex-row gap-8 items-center shadow-sm">
-                        <div class="w-full md:w-2/5 overflow-hidden relative rounded-xl">
-                            <!-- トップに表示したい画像に変更してください -->
-                            <img src="gift-thumbnail.jpg" alt="彼女が喜ぶ誕生日プレゼント5選" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
-                        </div>
-                        <div class="w-full md:w-3/5 space-y-4">
-                            <span class="text-xs border border-black text-black px-3 py-1 tracking-wider inline-block">GIFT & PRESENT</span>
-                            <h4 class="font-serif text-xl md:text-2xl font-semibold leading-relaxed">
-                                彼女が喜ぶ<br class="block md:hidden">誕生日プレゼント5選<br>
-                                <span class="text-base text-gray-700 mt-1 inline-block">（予算5,000円前後）</span>
-                            </h4>
-                            <p class="text-sm text-gray-600 leading-relaxed">
-                                TikTokで大反響だったギフト5選！価格改定後のリアルな最新価格と合わせて、絶対に外さない鉄板アイテムを厳選紹介。
-                            </p>
-                            <div class="pt-4">
-                                <a href="article-girlfriend-gift5.html" class="inline-block border border-black hover:bg-black hover:text-white text-black transition px-6 py-2 text-sm font-semibold">
-                                    記事を読む <i class="fa-solid fa-arrow-right ml-1"></i>
-                                </a>
+                    </a>
+
+                    <!-- PICK UP 03: ペアギフト5選 -->
+                    <a href="article-pair-gift5.html" class="magazine-card group flex-1">
+                        <div class="grid grid-cols-1 sm:grid-cols-12 h-full">
+                            <div class="sm:col-span-5 relative aspect-[4/3] sm:aspect-auto overflow-hidden bg-infobox">
+                                <img src="pair-gift-dw.jpg" alt="記念日・誕生日に贈りたいペアギフト5選" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            </div>
+                            <div class="sm:col-span-7 p-5 md:p-6 flex flex-col justify-between">
+                                <div>
+                                    <span class="editorial-tag mb-2.5">ペアギフト</span>
+                                    <h3 class="font-serif text-base md:text-lg text-charcoal leading-snug mb-2 group-hover:text-warmgray transition">
+                                        記念日・誕生日に贈りたいペアギフト5選（予算1〜2万円）
+                                    </h3>
+                                    <p class="text-xs text-warmgray leading-relaxed line-clamp-3">
+                                        THE KISSのペアリングやDaniel Wellingtonのバングル、Foo Tokyoの今治タオルまで2人で使える名品。
+                                    </p>
+                                </div>
+                                <div class="mt-4 pt-3 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                    <span>記事を読む</span>
+                                    <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                                </div>
                             </div>
                         </div>
-                    </article>
+                    </a>
                 </div>
             </div>
         </section>
 
-        
+        <!-- ============================================== -->
+        <!-- 4. 雑誌の目次風・記事グリッド一覧（カテゴリ絞り込み付き） -->
+        <!-- ============================================== -->
+        <section id="articles" class="scroll-mt-24">
+            <!-- アンカー互換用 -->
+            <div id="gift" class="scroll-mt-28"></div>
+            <div id="date" class="scroll-mt-28"></div>
+            <div id="dinner" class="scroll-mt-28"></div>
 
-        <!-- ============================================== -->
-        <!-- 4. DATE SPOTS & TRAVEL (シンプル配置) -->
-        <!-- ============================================== -->
-        <section id="date" class="scroll-mt-24 reveal pt-12">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-serif mb-4">Date Spots & Hotels</h2>
-                <p class="text-sm md:text-base text-gray-500 tracking-widest">思い出に残る場所 & デートスポット</p>
+            <div class="text-center max-w-2xl mx-auto mb-8 md:mb-10">
+                <span class="font-en-label text-xs text-warmbeige tracking-[0.22em] block mb-1">MAGAZINE INDEX</span>
+                <h2 class="font-serif text-2xl md:text-3xl text-charcoal mb-3">記事・特集インデックス</h2>
+                <p class="text-xs md:text-sm text-warmgray">気になるカテゴリを選んで、2人にぴったりの特集を探せます</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- 関西 -->
-                <a href="article-kansai.html" class="group block relative overflow-hidden aspect-square">
-                    <img src="kansai.jpg" class="w-full h-full object-cover img-zoom brightness-75 group-hover:brightness-50 transition" alt="関西">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
-                        <span class="font-english text-sm tracking-widest mb-1 border-b border-white pb-1">KANSAI</span>
-                        <h3 class="font-serif text-xl font-semibold">関西デートスポット</h3>
-                    </div>
-                </a>
-                <!-- 東京 -->
-    <a href="article-tokyo.html" class="group block relative overflow-hidden aspect-square">
-        <!-- スカイツリー・夜景のフリー画像を設定しています -->
-        <img src="tokyostation.jpg" class="w-full h-full object-cover img-zoom brightness-75 group-hover:brightness-50 transition" alt="東京デートスポット">
-        <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
-            <span class="font-english text-sm tracking-widest mb-1 border-b border-white pb-1">TOKYO</span>
-            <h3 class="font-serif text-xl font-semibold">学生におすすめ！<br>東京デートスポット</h3>
-        </div>
-    </a>
-                <!-- 名古屋 -->
-                <a href="article-nagoya.html" class="group block relative overflow-hidden aspect-square">
-                    <!-- ※画像URLは後で名古屋のゴロゴロスポットに合うもの(カフェやベッドなど)に変更することをおすすめします -->
-                    <img src="nagoya.jpg" class="w-full h-full object-cover img-zoom brightness-75 group-hover:brightness-50 transition" alt="名古屋ゴロゴロデート">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-                        <span class="font-english text-sm tracking-widest mb-1 border-b border-white pb-1">NAGOYA</span>
-                        <h3 class="font-serif text-lg md:text-xl font-semibold">インドアカップル必見！<br>ゴロゴロデートできるスポット</h3>
-                    </div>
-                </a>
-                <!-- 横浜 -->
-                <a href="article-yokohama.html" class="group block relative overflow-hidden aspect-square">
-                    <img src="yokohama.jpg" class="w-full h-full object-cover img-zoom brightness-75 group-hover:brightness-50 transition" alt="横浜デートスポット">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-                        <span class="font-english text-sm tracking-widest mb-1 border-b border-white pb-1">YOKOHAMA</span>
-                        <h3 class="font-serif text-lg md:text-xl font-semibold">横浜のカップルにおすすめ！<br>デートスポット5選</h3>
-                    </div>
-                </a>
-                <!-- 舞浜 -->
-                <a href="article-maihama.html" class="group block relative overflow-hidden aspect-square">
-                    <img src="maihama.jpg" class="w-full h-full object-cover img-zoom brightness-75 group-hover:brightness-50 transition" alt="千葉・舞浜ディナーデート">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
-                        <span class="font-english text-sm tracking-widest mb-1 border-b border-white pb-1">MAIHAMA</span>
-                        <h3 class="font-serif text-lg md:text-xl font-semibold">記念日に使える！<br>舞浜おしゃれディナー5選</h3>
-                    </div>
-                </a>
+            <!-- カテゴリ絞り込みボタン（すべて / デート / ギフト / ディナー・ホテル） -->
+            <div class="flex flex-wrap justify-center gap-2.5 md:gap-3 mb-10 md:mb-12" role="tablist" aria-label="記事カテゴリ絞り込み">
+                <button type="button" class="filter-tab active" data-filter="all">すべて</button>
+                <button type="button" class="filter-tab" data-filter="date">デート</button>
+                <button type="button" class="filter-tab" data-filter="gift">ギフト</button>
+                <button type="button" class="filter-tab" data-filter="dinner">ディナー・ホテル</button>
+            </div>
+
+            <!-- 写真比率 4:3 統一の雑誌目次グリッド（全11記事） -->
+            <div id="article-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-8">
+
+                <!-- 1. 舞浜ディナー5選 -->
+                <article class="magazine-card" data-category="date dinner">
+                    <a href="article-maihama.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="maihama.jpg" alt="記念日に使える！舞浜おしゃれディナー5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">ディナー・ホテル</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">MAIHAMA</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    記念日に使える！舞浜おしゃれディナー5選
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    シェラトンやヒルトン東京ベイ、イクスピアリで特別な夜を過ごせる厳選レストラン特集。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 2. 横浜デート5選 -->
+                <article class="magazine-card" data-category="date">
+                    <a href="article-yokohama.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="yokohama.jpg" alt="横浜のカップルにおすすめ！デートスポット5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">デート</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">YOKOHAMA</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    横浜のカップルにおすすめ！デートスポット5選
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    赤レンガ倉庫やYOKOHAMA AIR CABIN、新名所ティンバーワーフ、プラネタリウム、大さん橋まで巡る王道コース。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 3. 彼氏クリスマスプレゼント5選 -->
+                <article class="magazine-card" data-category="gift">
+                    <a href="article-boyfriend-xmas-gift5.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="xmas-gift-ilbisonte.jpg" alt="彼氏が本気で喜ぶクリスマスプレゼント5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">ギフト</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">XMAS GIFT</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    彼氏が本気で喜ぶクリスマスプレゼント5選（予算2万円）
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    Paul Smithのカシミヤ混マフラーやIL BISONTEのレザーキーケース、マルジェラの香水など予算2万円前後の名品ギフト。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 4. ペアギフト5選 -->
+                <article class="magazine-card" data-category="gift">
+                    <a href="article-pair-gift5.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="pair-gift-dw.jpg" alt="記念日・誕生日に贈りたいペアギフト5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">ギフト</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">PAIR GIFT</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    記念日・誕生日に贈りたいペアギフト5選（予算1〜2万円）
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    THE KISSのペアリングやDaniel Wellingtonのペアバングル、Foo Tokyoの今治タオル、サーモスの名入れタンブラー。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 5. 褒められ香水5選 -->
+                <article class="magazine-card" data-category="gift">
+                    <a href="article-perfume5.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="Jo Malone London.jpg" alt="恋人が本気で喜ぶ褒められ香水5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">ギフト</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">FRAGRANCE</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    恋人が本気で喜ぶ褒められ香水5選（大本命ギフト）
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    「恋人からもらって本当に嬉しかった」「周りから褒められた」と絶賛される、SHIROやJo Maloneなどの至極の香水。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 6. 予算1万円の実用ギフト5選 -->
+                <article class="magazine-card" data-category="gift">
+                    <a href="article-gift5.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="gift-cover.jpg" alt="予算1万円のセンス良すぎな実用ギフト5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">ギフト</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">UNDER ¥10,000</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    予算1万円のセンス良すぎな実用ギフト5選
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    DiorのハンドジェルやSABONのヘッドスクラブなど、男女問わず喜ばれる絶対外さない実用品を厳選紹介。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 7. 彼女が喜ぶ誕生日プレゼント5選 -->
+                <article class="magazine-card" data-category="gift">
+                    <a href="article-girlfriend-gift5.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="gift-thumbnail.jpg" alt="彼女が喜ぶ誕生日プレゼント5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">ギフト</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">FOR HER</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    彼女が喜ぶ誕生日プレゼント5選（予算5,000円前後）
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    TikTokで大反響だったギフト5選！価格改定後のリアルな最新価格と合わせて、絶対に外さない鉄板アイテムを厳選。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 8. アリバのペアネックレス徹底解説 -->
+                <article class="magazine-card" data-category="gift">
+                    <a href="article-aliba.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="alibaring.png" alt="アリバのサージカルステンレス製ペアネックレス徹底解説">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">ギフト・レビュー</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">REVIEW</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    リングの刻印がエモい。アリバのペアネックレス徹底解説
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    金属アレルギーでも安心なサージカルステンレス製。お風呂でもつけっぱなしOKで大人っぽいデザインの秘密を解説。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 9. 東京デートスポット5選 -->
+                <article class="magazine-card" data-category="date">
+                    <a href="article-tokyo.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="tokyostation.jpg" alt="学生におすすめ！東京デートスポット5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">デート</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">TOKYO</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    学生におすすめ！東京デートスポット5選
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    SHIBUYA SKYや三鷹の森ジブリ美術館、アクアパーク品川、ソラマチまで思い出に残る東京の王道スポット。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 10. 名古屋ゴロゴロデート5選 -->
+                <article class="magazine-card" data-category="date dinner">
+                    <a href="article-nagoya.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="nagoya.jpg" alt="インドアカップル必見！名古屋ゴロゴロデート5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">デート・ホテル</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">NAGOYA</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    インドアカップル必見！名古屋ゴロゴロデート5選
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    キャナルリゾートやランプライトブックスホテル名古屋、RAKU SPAなど2人でのんびり過ごせる癒やしスポット。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 11. 関西デートスポット5選 -->
+                <article class="magazine-card" data-category="date">
+                    <a href="article-kansai.html" class="flex flex-col h-full group">
+                        <div class="magazine-card-img-wrap">
+                            <img src="kansai.jpg" alt="2026年関西の最新デートスポット5選">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between gap-2 mb-3">
+                                    <span class="editorial-tag">デート</span>
+                                    <span class="font-en-label text-[11px] text-warmgray">KANSAI</span>
+                                </div>
+                                <h3 class="font-serif text-lg md:text-xl text-charcoal leading-relaxed mb-2.5 group-hover:text-warmgray transition">
+                                    2026年関西の最新デートスポット5選
+                                </h3>
+                                <p class="text-xs md:text-sm text-warmgray leading-[1.85]">
+                                    チームラボ京都や神戸TOTTEI PARK、ニンテンドーミュージアム、グラングリーン大阪など話題の最新スポット。
+                                </p>
+                            </div>
+                            <div class="mt-5 pt-3.5 border-t border-[#EAE5DD] flex items-center justify-between text-xs font-medium text-charcoal">
+                                <span>記事を読む</span>
+                                <i class="fa-solid fa-arrow-right text-warmbeige"></i>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
             </div>
         </section>
 
-        <!-- ▼ 厳選動画エリア (最大2つ) ▼ -->
-        <div class="mb-16">
-            <h3 class="font-serif text-xl md:text-2xl font-semibold mb-8 flex items-center gap-2">
-                <i class="fa-brands fa-tiktok text-black"></i> Trending Videos
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 justify-items-center">
-                
+        <!-- ============================================== -->
+        <!-- 5. 厳選動画エリア (Trending Videos) -->
+        <!-- ============================================== -->
+        <section id="tips" class="scroll-mt-24 pt-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-10 pb-4 border-b border-[#EAE5DD]">
+                <div>
+                    <span class="font-en-label text-xs text-warmbeige tracking-[0.22em] block mb-1">TRENDING ON TikTok</span>
+                    <h2 class="font-serif text-2xl md:text-3xl text-charcoal flex items-center gap-2.5">
+                        <i class="fa-brands fa-tiktok text-lg"></i> 話題のショート動画
+                    </h2>
+                </div>
+                <p class="text-xs md:text-sm text-warmgray mt-2 md:mt-0">@couplearekore で反響の大きかった人気リール</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 justify-items-center">
                 <!-- TikTok 1つ目 (アリバの動画) -->
-                <div class="bg-white py-6 w-full max-w-[420px] shadow-sm flex flex-col items-center min-h-[480px] border border-gray-200 overflow-hidden">
-                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@couplearekore/video/7650116289465339156" data-video-id="7650116289465339156" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@couplearekore" href="https://www.tiktok.com/@couplearekore?refer=embed">@couplearekore</a> リングの刻印の意味がエモすぎるペアネックレス💍 </section> </blockquote>
+                <div class="bg-white p-5 md:p-6 w-full max-w-[420px] rounded-xl border border-[#EAE5DD] flex flex-col items-center min-h-[480px] overflow-hidden">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@couplearekore/video/7650116289465339156" data-video-id="7650116289465339156" style="max-width: 605px;min-width: 325px;">
+                        <section><a target="_blank" title="@couplearekore" href="https://www.tiktok.com/@couplearekore?refer=embed">@couplearekore</a> リングの刻印の意味がエモすぎるペアネックレス💍</section>
+                    </blockquote>
                 </div>
 
                 <!-- TikTok 2つ目 -->
-                <div class="bg-white py-6 w-full max-w-[420px] shadow-sm flex flex-col items-center justify-center min-h-[480px] border border-gray-200 overflow-hidden">
-                    <!-- ========================================== -->
-                    <!-- 以下のdivタグを消して、2つ目のTikTokコードを貼る -->
-                    <!-- ※絶対に <script...> の行は貼らないこと！        -->
-                    <!-- ========================================== -->
-                   <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@couplearekore/video/7398121789940960519" data-video-id="7398121789940960519" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@couplearekore" href="https://www.tiktok.com/@couplearekore?refer=embed">@couplearekore</a> 夏休みに行きたい学生デートスポット5選<a title="カップル" target="_blank" href="https://www.tiktok.com/tag/%E3%82%AB%E3%83%83%E3%83%97%E3%83%AB?refer=embed">#カップル</a> <a title="学生" target="_blank" href="https://www.tiktok.com/tag/%E5%AD%A6%E7%94%9F?refer=embed">#学生</a> <a title="デート" target="_blank" href="https://www.tiktok.com/tag/%E3%83%87%E3%83%BC%E3%83%88?refer=embed">#デート</a> <a title="東京" target="_blank" href="https://www.tiktok.com/tag/%E6%9D%B1%E4%BA%AC?refer=embed">#東京</a> <a target="_blank" title="♬ Call Of Silence x Star Sky _ Cozak Remix - 🎙️ Mai Xuân Thắng" href="https://www.tiktok.com/music/Call-Of-Silence-x-Star-Sky-Cozak-Remix-7284158346381298433?refer=embed">♬ Call Of Silence x Star Sky _ Cozak Remix - 🎙️ Mai Xuân Thắng</a> </section> </blockquote> 
+                <div class="bg-white p-5 md:p-6 w-full max-w-[420px] rounded-xl border border-[#EAE5DD] flex flex-col items-center justify-center min-h-[480px] overflow-hidden">
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@couplearekore/video/7398121789940960519" data-video-id="7398121789940960519" style="max-width: 605px;min-width: 325px;">
+                        <section><a target="_blank" title="@couplearekore" href="https://www.tiktok.com/@couplearekore?refer=embed">@couplearekore</a> 夏休みに行きたい学生デートスポット5選<a title="カップル" target="_blank" href="https://www.tiktok.com/tag/%E3%82%AB%E3%83%83%E3%83%97%E3%83%AB?refer=embed">#カップル</a> <a title="学生" target="_blank" href="https://www.tiktok.com/tag/%E5%AD%A6%E7%94%9F?refer=embed">#学生</a> <a title="デート" target="_blank" href="https://www.tiktok.com/tag/%E3%83%87%E3%83%BC%E3%83%88?refer=embed">#デート</a> <a title="東京" target="_blank" href="https://www.tiktok.com/tag/%E6%9D%B1%E4%BA%AC?refer=embed">#東京</a></section>
+                    </blockquote>
                 </div>
             </div>
-        </div>
+        </section>
 
     </main>
 
     <!-- ============================================== -->
-    <!-- 5. フッター -->
+    <!-- 6. フッター -->
     <!-- ============================================== -->
-    <footer class="bg-black text-white py-16 text-center">
+    <footer class="bg-white border-t border-[#EAE5DD] py-14 md:py-16 mt-12 text-center">
         <div class="max-w-xl mx-auto px-6">
-            <h2 class="font-title text-2xl tracking-widest mb-6">カップルあれこれ</h2>
-            <p class="text-gray-400 text-sm leading-relaxed mb-8">
-                TikTokで話題のカップル情報アカウント。<br>
-                2人の時間がもっと楽しくなるアイデアをお届けします。
+            <p class="font-en-label text-[10px] text-warmbeige tracking-[0.25em] mb-1">OFFICIAL WEB MAGAZINE</p>
+            <h2 class="site-logo font-serif text-xl md:text-2xl tracking-widest text-charcoal mb-4">カップルあれこれ</h2>
+            <p class="text-warmgray text-xs md:text-sm leading-relaxed mb-6">
+                TikTokで話題のカップル情報メディア。<br>
+                2人の時間がもっと楽しくなるデート・ディナー・ギフトのアイデアをお届けします。
             </p>
-            <p class="text-xs text-gray-600 tracking-widest font-english">© 2026 COUPLE AREKORE.</p>
+            <div class="flex justify-center gap-6 text-xs text-warmgray mb-8">
+                <a href="#pickup" class="hover:text-charcoal transition">PICK UP</a>
+                <a href="#articles" class="hover:text-charcoal transition">ARTICLES</a>
+                <a href="https://www.tiktok.com/@couplearekore" target="_blank" rel="noopener noreferrer" class="hover:text-charcoal transition">TikTok</a>
+            </div>
+            <p class="text-[11px] text-warmgray tracking-widest font-en-label">&copy; 2026 COUPLE AREKORE.</p>
         </div>
     </footer>
 
-    <!-- ============================================== -->
-    <!-- 動作させるためのスクリプト類 -->
-    <!-- ============================================== -->
-    
-    <!-- スクロールアニメーション（ふわっと表示させる動き） -->
+    <!-- カテゴリ絞り込み＆アニメーション制御スクリプト -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.reveal');
-            const revealOnScroll = () => {
-                const windowHeight = window.innerHeight;
-                const elementVisible = 100;
-                reveals.forEach((reveal) => {
-                    const elementTop = reveal.getBoundingClientRect().top;
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveal.classList.add('active');
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll(".filter-tab");
+            const cards = document.querySelectorAll("#article-grid [data-category]");
+            const navFilterLinks = document.querySelectorAll("[data-nav-filter]");
+
+            function applyFilter(filterValue) {
+                tabs.forEach((t) => {
+                    t.classList.toggle("active", t.getAttribute("data-filter") === filterValue);
+                });
+                cards.forEach((card) => {
+                    const cats = (card.getAttribute("data-category") || "").split(/\s+/);
+                    if (filterValue === "all" || cats.includes(filterValue)) {
+                        card.style.display = "";
+                    } else {
+                        card.style.display = "none";
                     }
                 });
-            };
-            window.addEventListener('scroll', revealOnScroll);
-            revealOnScroll(); 
+            }
+
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", function () {
+                    applyFilter(this.getAttribute("data-filter") || "all");
+                });
+            });
+
+            navFilterLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    const f = this.getAttribute("data-nav-filter") || "all";
+                    applyFilter(f);
+                });
+            });
+
+            if (window.location.hash === "#gift") {
+                applyFilter("gift");
+            } else if (window.location.hash === "#date") {
+                applyFilter("date");
+            } else if (window.location.hash === "#dinner") {
+                applyFilter("dinner");
+            }
         });
     </script>
-    
-    <!-- ▼ TikTok動画を正しく表示するためのプログラム ▼ -->
-    <!-- エラーを防ぐため、必ずページの一番最後に【1回だけ】配置してください -->
-    <script async src="https://www.tiktok.com/embed.js"></script>
 
+    <!-- TikTok埋め込みスクリプト（末尾1回のみ） -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
 </body>
 </html>

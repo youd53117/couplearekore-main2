@@ -1,0 +1,430 @@
+/* ==========================================================================
+   couple-arekore.com — FUDGE.jp × OZmall Hybrid Editorial Design System
+   ========================================================================== */
+
+:root {
+    --bg-ecru: #FAF8F5;
+    --bg-white: #FFFFFF;
+    --bg-info: #F3EFEA;
+    --text-charcoal: #2E2C29;
+    --text-muted: #757068;
+    --accent-beige: #C5B49E;
+    --accent-rose: #D4A59A;
+    --cta-black: #111111;
+    --cta-black-hover: #2E2C29;
+    --border-subtle: #EAE5DD;
+    --price-rose: #A65B50;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-ecru);
+    color: var(--text-charcoal);
+}
+
+body {
+    background-color: var(--bg-ecru) !important;
+    color: var(--text-charcoal) !important;
+    font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif !important;
+    line-height: 1.85;
+    letter-spacing: 0.03em;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Helpers */
+.font-editorial,
+.font-serif,
+.site-logo,
+.article-h1,
+.section-heading {
+    font-family: "Noto Serif JP", Georgia, serif !important;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+}
+
+.font-sans,
+.spot-title,
+.article-body {
+    font-family: "Noto Sans JP", sans-serif !important;
+    line-height: 1.85;
+}
+
+.font-en-label {
+    font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* Header & Navigation (Airy Magazine Header) */
+.editorial-nav {
+    background-color: rgba(250, 248, 245, 0.94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Editorial Category Tag / Pill */
+.editorial-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: var(--text-charcoal);
+    background-color: var(--bg-info);
+    border-left: 3px solid var(--accent-rose);
+    padding: 0.3rem 0.85rem;
+    font-weight: 500;
+}
+
+/* Spot / Item Card — Flat, Airy FUDGE Paper Style */
+.editorial-card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+    margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    .editorial-card {
+        margin-bottom: 4.5rem;
+    }
+}
+
+.editorial-card-body {
+    padding: 1.75rem 1.35rem 2.25rem;
+}
+
+@media (min-width: 768px) {
+    .editorial-card-body {
+        padding: 2.75rem 3rem 3rem;
+    }
+}
+
+/* SPOT 01 / ITEM 01 Header Block (OZmall × FUDGE) */
+.spot-header {
+    margin-bottom: 1.35rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.spot-label-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.55rem;
+}
+
+.spot-number {
+    font-family: "Cormorant Garamond", "Noto Serif JP", serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--bg-white);
+    background-color: var(--accent-beige);
+    padding: 0.2rem 0.75rem;
+    border-radius: 4px;
+}
+
+.spot-catch {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    background-color: var(--bg-info);
+    padding: 0.2rem 0.75rem;
+    border-radius: 4px;
+}
+
+.spot-title {
+    font-family: "Noto Sans JP", sans-serif !important;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-charcoal);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .spot-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Body Description */
+.spot-description {
+    color: var(--text-charcoal);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 1.6rem;
+}
+
+@media (min-width: 768px) {
+    .spot-description {
+        font-size: 1rem;
+    }
+}
+
+/* OZmall-style Practical Basic Info Box (#F3EFEA, 8px radius) */
+.spot-info-box {
+    background-color: var(--bg-info);
+    border-radius: 8px;
+    padding: 1.15rem 1.25rem;
+    margin-bottom: 1.6rem;
+    font-size: 0.86rem;
+    line-height: 1.8;
+    color: var(--text-charcoal);
+    border-left: 3px solid var(--accent-beige);
+}
+
+.spot-info-box dl,
+.spot-info-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.spot-info-list li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.spot-info-list li:last-child {
+    margin-bottom: 0;
+}
+
+.spot-info-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-rose);
+    font-weight: 700;
+}
+
+/* Price Badge in Info Box or Item Card */
+.editorial-price {
+    color: var(--price-rose);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Media & Map Spacing */
+.editorial-media-wrap {
+    background-color: var(--bg-info);
+    overflow: hidden;
+}
+
+.editorial-credit {
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-align: right;
+    padding: 0.45rem 1.25rem 0;
+}
+
+.editorial-map-box {
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background-color: var(--bg-info);
+}
+
+/* Instagram Secondary Button & Mandatory Black CTA Button */
+.editorial-insta-btn {
+    display: block;
+    width: 100%;
+    border: 1.5px solid var(--text-charcoal);
+    background-color: var(--bg-white);
+    color: var(--text-charcoal);
+    text-align: center;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    margin-bottom: 0.85rem;
+    transition: all 0.25s ease;
+}
+
+.editorial-insta-btn:hover {
+    background-color: var(--bg-info);
+}
+
+.editorial-cta-black {
+    display: block;
+    width: 100%;
+    background-color: var(--cta-black) !important;
+    color: #FFFFFF !important;
+    text-align: center;
+    font-weight: 600;
+    padding: 1.05rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.98rem;
+    letter-spacing: 0.04em;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.editorial-cta-black:hover {
+    background-color: var(--cta-black-hover) !important;
+}
+
+/* Index Page: Category Filter Tabs */
+.filter-tab {
+    padding: 0.55rem 1.25rem;
+    border-radius: 9999px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-subtle);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.filter-tab:hover {
+    color: var(--text-charcoal);
+    border-color: var(--accent-beige);
+}
+
+.filter-tab.active {
+    background-color: var(--text-charcoal);
+    color: var(--bg-white);
+    border-color: var(--text-charcoal);
+}
+
+/* Magazine Index Card */
+.magazine-card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.magazine-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-beige);
+}
+
+.magazine-card-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: var(--bg-info);
+}
+
+.magazine-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.magazine-card:hover .magazine-card-img-wrap img {
+    transform: scale(1.04);
+}
+
+/* Hero 3-Photo Ken Burns Crossfade Slideshow (FUDGE × OZmall Editorial Motion) */
+.hero-slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bg-info);
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: heroKenBurns 24s ease-in-out infinite;
+}
+
+.hero-slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-slide:nth-child(2) {
+    animation-delay: 8s;
+}
+
+.hero-slide:nth-child(3) {
+    animation-delay: 16s;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.9) contrast(0.97) brightness(0.97);
+}
+
+/* Warm editorial veil so photos harmonize with #FAF8F5 ecru background */
+.hero-slideshow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(250, 248, 245, 0.08) 0%,
+        rgba(46, 44, 41, 0.06) 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes heroKenBurns {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    6% {
+        opacity: 1;
+    }
+    33.33% {
+        opacity: 1;
+    }
+    39.33% {
+        opacity: 0;
+        transform: scale(1.06);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.06);
+    }
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

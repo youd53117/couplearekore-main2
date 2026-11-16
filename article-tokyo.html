@@ -3,176 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学生おすすめ東京デートスポット5選 | カップルあれこれ</title>
-
-    <!-- Tailwind CSS -->
+    <title>学生おすすめ東京デートスポット5選 | カップルあれこれ 公式Webマガジン</title>
+    <meta name="description" content="次の休みはどこ行く？TikTokで紹介した東京の人気デートスポットの中から、特に学生カップルにおすすめしたいSHIBUYA SKYやジブリ美術館、アクアパーク品川など5選をご紹介。">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Kiwi+Maru:wght@400;500&family=Noto+Serif+JP:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- サイト全体の設定（フォント・カラー） -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
                         serif: ['"Noto Serif JP"', 'serif'],
                         english: ['"Cormorant Garamond"', 'serif'],
-                        title: ['"Kiwi Maru"', 'serif'],
                     },
                     colors: {
+                        ecru: '#FAF8F5',
+                        charcoal: '#2E2C29',
+                        warmgray: '#757068',
+                        warmbeige: '#C5B49E',
+                        rosebeige: '#D4A59A',
+                        infobox: '#F3EFEA',
                         black: '#111111',
-                        gray: {
-                            50: '#fafafa',
-                            100: '#f5f5f5',
-                            900: '#1a1a1a',
-                        }
                     }
                 }
             }
         }
     </script>
-
-    <!-- アニメーション等のスタイル -->
-    <style>
-        html { scroll-behavior: smooth; }
-        .fade-in { animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; opacity: 0; transform: translateY(20px); }
-        .delay-1 { animation-delay: 0.3s; }
-        .delay-2 { animation-delay: 0.6s; }
-        @keyframes fadeIn {
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
-<body class="bg-gray-50 text-black font-sans antialiased selection:bg-black selection:text-white">
+<body class="bg-ecru text-charcoal font-sans antialiased selection:bg-charcoal selection:text-white">
 
     <!-- ナビゲーション -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4 shadow-sm">
-        <div class="max-w-5xl mx-auto px-4 md:px-6 flex justify-between items-center">
-            <a href="index.html" class="font-title font-medium text-sm md:text-xl tracking-wide">カップルあれこれ</a>
-            
-            <div class="flex gap-3 md:gap-8 text-[10px] md:text-sm tracking-widest font-english">
-                <a href="index.html#gift" class="hover:text-gray-500 transition">GIFT</a>
-                <a href="index.html#date" class="hover:text-gray-500 transition">DATE</a>
-                <a href="index.html#tips" class="hover:text-gray-500 transition">TIPS</a>
+    <nav class="editorial-nav sticky top-0 z-50 py-4 md:py-5">
+        <div class="max-w-6xl mx-auto px-5 md:px-8 flex justify-between items-center">
+            <a href="index.html" class="group flex flex-col">
+                <span class="site-logo font-serif text-lg md:text-2xl tracking-widest text-charcoal">カップルあれこれ</span>
+                <span class="font-en-label text-[9px] md:text-[10px] text-warmgray tracking-[0.22em] -mt-1">COUPLE AREKORE MAGAZINE</span>
+            </a>
+            <div class="flex items-center gap-4 md:gap-9 text-[11px] md:text-xs tracking-[0.18em] font-en-label text-charcoal">
+                <a href="index.html#pickup" class="hover:text-warmgray transition">PICK UP</a>
+                <a href="index.html#date" class="hover:text-warmgray transition">DATE</a>
+                <a href="index.html#gift" class="hover:text-warmgray transition">GIFT</a>
+                <a href="index.html#tips" class="hover:text-warmgray transition">MOVIE</a>
             </div>
-
-            <div class="flex gap-2 md:gap-4 text-base md:text-lg">
-                <a href="https://www.tiktok.com/@couplearekore" target="_blank" class="hover:opacity-70 transition"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
+            <a href="https://www.tiktok.com/@couplearekore" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-charcoal hover:text-warmgray transition border border-[#EAE5DD] bg-white px-3 py-1.5 rounded-full">
+                <i class="fa-brands fa-tiktok text-sm"></i> <span class="hidden md:inline font-en-label text-[10px] tracking-widest">OFFICIAL TikTok</span>
+            </a>
         </div>
     </nav>
 
     <!-- メインコンテンツ -->
-    <main class="max-w-3xl mx-auto px-6 py-12 fade-in">
-        
-        <!-- タイトルエリア -->
-        <div class="mb-12 text-center">
-            <span class="inline-block border border-black px-3 py-1 text-xs tracking-widest mb-4 font-english">DATE SPOT</span>
-            <h1 class="text-3xl md:text-4xl font-bold mb-4 leading-tight font-serif">
-                学生におすすめ！<br>
-                東京デートスポット5選
+    <main class="max-w-3xl mx-auto px-5 md:px-6 py-12 md:py-16 fade-in">
+        <header class="mb-14 md:mb-16 text-center">
+            <span class="editorial-tag mb-5">DATE SPOT / TOKYO</span>
+            <h1 class="article-h1 text-2xl md:text-4xl font-normal mb-6 leading-relaxed font-serif text-charcoal">
+                学生におすすめ！<br>東京デートスポット5選
             </h1>
-            <p class="text-gray-600 text-xs md:text-sm leading-relaxed mb-2">
+            <p class="text-warmgray text-sm md:text-base leading-[1.95] max-w-xl mx-auto mb-5">
                 次の休みはどこ行く？TikTokで紹介した東京の人気デートスポットの中から、特に「学生カップル」に全力でおすすめしたい場所を厳選！<br class="hidden md:block">
                 お金をかけずに最高の思い出を作っちゃおう！
             </p>
-            <p class="text-xs text-gray-400 text-center mb-8">※本ページはプロモーションが含まれています</p>
-        </div>
+            <p class="text-xs text-warmgray text-center">※本ページはプロモーションが含まれています</p>
+        </header>
 
-        
-
-        <!-- 第1位 SHIBUYA SKY -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="shibuyasky.jpeg" alt="SHIBUYA SKYの展望風景" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：SHIBUYA SKY公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第1位: 空中庭園で過ごす最高のエモいマジックアワー</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">1. SHIBUYA SKY（渋谷スカイ）</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">9月限定の特別イベント「天空の夢回廊」が開催中！夕暮れ時に行って、ガラス張りの絶景コーナー「SKY EDGE」でシルエット写真を撮るのがいまのトレンドです。事前にWEB割チケットを購入すれば、学生でもお得に楽しめます。スマホの容量を空けてから行くのがおすすめ◎</p>
-                <a href="https://www.shibuya-scramble-square.com/sky/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 01. SHIBUYA SKY -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="shibuyasky.jpeg" alt="SHIBUYA SKYの展望風景" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：SHIBUYA SKY公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 01</span>
+                        <span class="spot-catch">第1位: 空中庭園で過ごす最高のエモいマジックアワー</span>
+                    </div>
+                    <h3 class="spot-title">SHIBUYA SKY（渋谷スカイ）</h3>
+                </div>
+                <p class="spot-description">
+                    9月限定の特別イベント「天空の夢回廊」が開催中！夕暮れ時に行って、ガラス張りの絶景コーナー「SKY EDGE」でシルエット写真を撮るのがいまのトレンドです。事前にWEB割チケットを購入すれば、学生でもお得に楽しめます。スマホの容量を空けてから行くのがおすすめ◎
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>東京・渋谷（渋谷スクランブルスクエア）</li>
+                        <li><strong>おすすめポイント：</strong>夕暮れ〜マジックアワーの「SKY EDGE」シルエット撮影・WEB割チケットあり</li>
+                    </ul>
+                </div>
+                <a href="https://www.shibuya-scramble-square.com/sky/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
-        <!-- 第2位 三鷹の森ジブリ美術館 -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="ghibli.jpg" alt="三鷹の森ジブリ美術館の外観" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：三鷹の森ジブリ美術館公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第2位: 芸術の秋！映画の世界に迷い込むノスタルジック体験</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">2. 三鷹の森ジブリ美術館</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">映像展示室では短編アニメーション『パン種とタマゴ姫』を上映中。大学生1,000円、高校生700円という破格のコスパで、丸一日充実したデートが可能です。館内は撮影禁止だからこそ、スマホを置いて2人の会話に集中できる濃密な時間が過ごせます。</p>
-                <a href="https://www.ghibli-museum.jp/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 02. 三鷹の森ジブリ美術館 -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="ghibli.jpg" alt="三鷹の森ジブリ美術館の外観" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：三鷹の森ジブリ美術館公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 02</span>
+                        <span class="spot-catch">第2位: 芸術の秋！映画の世界に迷い込むノスタルジック体験</span>
+                    </div>
+                    <h3 class="spot-title">三鷹の森ジブリ美術館</h3>
+                </div>
+                <p class="spot-description">
+                    映像展示室では短編アニメーション『パン種とタマゴ姫』を上映中。大学生1,000円、高校生700円という破格のコスパで、丸一日充実したデートが可能です。館内は撮影禁止だからこそ、スマホを置いて2人の会話に集中できる濃密な時間が過ごせます。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>東京・三鷹（井の頭恩賜公園西園内）</li>
+                        <li><strong>料金目安：</strong><span class="editorial-price">大学生 1,000円 ／ 高校生 700円（日時指定予約制）</span></li>
+                    </ul>
+                </div>
+                <a href="https://www.ghibli-museum.jp/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
-        <!-- 第3位 東京ドームシティアトラクションズ -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="tokyodomecity.jpg" alt="東京ドームシティアトラクションズ" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：東京ドームシティ公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第3位: 入園無料！放課後からでも大満喫の遊園地デート</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">3. 東京ドームシティアトラクションズ</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">秋の夜長はライトアップされた園内を散歩するだけでもロマンチック。入園自体は無料なので、乗りたいアトラクションだけチケットを買えばOK！学生なら5つのアトラクションに乗れる「ライド5」チケットを買うのが一番コスパが良くて大満足できます。</p>
-                <a href="https://at-raku.com/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 03. 東京ドームシティアトラクションズ -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="tokyodomecity.jpg" alt="東京ドームシティアトラクションズ" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：東京ドームシティ公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 03</span>
+                        <span class="spot-catch">第3位: 入園無料！放課後からでも大満喫の遊園地デート</span>
+                    </div>
+                    <h3 class="spot-title">東京ドームシティアトラクションズ</h3>
+                </div>
+                <p class="spot-description">
+                    秋の夜長はライトアップされた園内を散歩するだけでもロマンチック。入園自体は無料なので、乗りたいアトラクションだけチケットを買えばOK！学生なら5つのアトラクションに乗れる「ライド5」チケットを買うのが一番コスパが良くて大満足できます。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>東京・水道橋／後楽園</li>
+                        <li><strong>料金目安：</strong><span class="editorial-price">入園無料（アトラクション別料金・「ライド5」チケットあり）</span></li>
+                    </ul>
+                </div>
+                <a href="https://at-raku.com/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
-        <!-- 第4位 マクセル アクアパーク品川 -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="aquapark.jpg" alt="アクアパーク品川のイルカショー" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：マクセル アクアパーク品川公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第4位: 天候に左右されない！音と光の幻想水族館</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">4. マクセル アクアパーク品川</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">現在NAKEDとコラボした「モミジアクアリウム」を開催中！完全屋内型なので、秋雨で天気が崩れやすい日でも髪型や服装を気にせず楽しめます。9月から特大の「高校生割引」がスタートしたので、学生証を忘れずに持参して感動のイルカショーを目に焼き付けて。</p>
-                <a href="https://www.aqua-park.jp/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 04. マクセル アクアパーク品川 -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="aquapark.jpg" alt="アクアパーク品川のイルカショー" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：マクセル アクアパーク品川公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 04</span>
+                        <span class="spot-catch">第4位: 天候に左右されない！音と光の幻想水族館</span>
+                    </div>
+                    <h3 class="spot-title">マクセル アクアパーク品川</h3>
+                </div>
+                <p class="spot-description">
+                    現在NAKEDとコラボした「モミジアクアリウム」を開催中！完全屋内型なので、秋雨で天気が崩れやすい日でも髪型や服装を気にせず楽しめます。9月から特大の「高校生割引」がスタートしたので、学生証を忘れずに持参して感動のイルカショーを目に焼き付けて。
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>東京・品川駅（高輪口）徒歩約2分</li>
+                        <li><strong>おすすめポイント：</strong>全天候型屋内施設・音と光のドルフィンパフォーマンス</li>
+                    </ul>
+                </div>
+                <a href="https://www.aqua-park.jp/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
-        <!-- 第5位 東京ソラマチ -->
-        <div class="mb-12 bg-white rounded-xl shadow-sm overflow-hidden reveal">
-            <img src="tokyosolamachi.jpg" alt="東京ソラマチの外観" class="w-full h-64 md:h-96 object-contain bg-gray-100">
-            <p class="text-xs text-gray-400 text-right px-6 pt-2">出典：東京ソラマチ公式サイト</p>
-            <div class="p-6 md:p-8">
-                <span class="inline-block bg-black text-white text-xs font-bold px-3 py-1 rounded-sm mb-4">第5位: 食欲の秋！グルメも景色も欲張る定番スポット</span>
-                <h3 class="text-2xl font-bold mb-4 font-serif">5. 東京ソラマチ</h3>
-                <p class="text-gray-600 leading-relaxed mb-6">300以上の多彩な店舗が集結しており、ウィンドウショッピングだけでも会話が弾みます。9月はオクトーバーフェストなどの屋外グルメイベントも充実。夜は広場から見上げるライトアップされたスカイツリーを背景に、2人で自撮りするのが定番の映えコース！</p>
-                <a href="https://www.tokyo-solamachi.jp/" target="_blank" class="block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition shadow-sm text-lg">
-                    スポット詳細をチェックする
+        <!-- SPOT 05. 東京ソラマチ -->
+        <article class="editorial-card reveal">
+            <div class="editorial-media-wrap">
+                <img src="tokyosolamachi.jpg" alt="東京ソラマチの外観" class="w-full h-64 md:h-96 object-contain">
+            </div>
+            <p class="editorial-credit">出典：東京ソラマチ公式サイト</p>
+            <div class="editorial-card-body">
+                <div class="spot-header">
+                    <div class="spot-label-row">
+                        <span class="spot-number">SPOT 05</span>
+                        <span class="spot-catch">第5位: 食欲の秋！グルメも景色も欲張る定番スポット</span>
+                    </div>
+                    <h3 class="spot-title">東京ソラマチ</h3>
+                </div>
+                <p class="spot-description">
+                    300以上の多彩な店舗が集結しており、ウィンドウショッピングだけでも会話が弾みます。9月はオクトーバーフェストなどの屋外グルメイベントも充実。夜は広場から見上げるライトアップされたスカイツリーを背景に、2人で自撮りするのが定番の映えコース！
+                </p>
+                <div class="spot-info-box">
+                    <ul class="spot-info-list">
+                        <li><strong>エリア：</strong>東京・押上（とうきょうスカイツリー駅・押上駅直結）</li>
+                        <li><strong>おすすめポイント：</strong>300店舗以上のショップ＆グルメ・夜のスカイツリーライトアップ</li>
+                    </ul>
+                </div>
+                <a href="https://www.tokyo-solamachi.jp/" target="_blank" rel="noopener noreferrer" class="editorial-cta-black block w-full bg-black hover:bg-gray-800 text-white text-center font-bold py-4 rounded-lg transition">
+                    この施設の詳細を見る <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
                 </a>
             </div>
-        </div>
+        </article>
 
+        <!-- 戻るボタン -->
+        <div class="mt-16 text-center">
+            <a href="index.html" class="inline-block bg-white border border-[#C5B49E] text-charcoal hover:bg-infobox transition px-10 py-4 rounded-full text-sm font-medium tracking-wider">
+                <i class="fa-solid fa-arrow-left mr-2"></i> 特集・記事一覧へ戻る
+            </a>
+        </div>
     </main>
 
     <!-- フッター -->
-    <footer class="bg-white border-t border-gray-200 py-12 mt-12 text-center">
-        <p class="text-gray-400 text-sm font-serif">&copy; 2026 カップルあれこれ</p>
+    <footer class="bg-white border-t border-[#EAE5DD] py-12 mt-12 text-center">
+        <p class="text-warmgray text-xs md:text-sm font-serif">&copy; 2026 カップルあれこれ</p>
     </footer>
 
     <!-- スクロールアニメーション用のJS -->
@@ -181,7 +233,7 @@
             const reveals = document.querySelectorAll(".reveal");
             const revealOnScroll = function() {
                 const windowHeight = window.innerHeight;
-                const elementVisible = 100;
+                const elementVisible = 50;
                 reveals.forEach((reveal) => {
                     const elementTop = reveal.getBoundingClientRect().top;
                     if (elementTop < windowHeight - elementVisible) {
@@ -190,7 +242,7 @@
                 });
             };
             window.addEventListener("scroll", revealOnScroll);
-            revealOnScroll(); 
+            revealOnScroll();
         });
     </script>
 </body>
