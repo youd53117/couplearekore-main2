@@ -1,9 +1,20 @@
-# Secrets & local bridge config
+# 厳重セキュリティ・GitHub公開防止除外リスト
+tiktok-data/
+tiktok-session/
+scripts/
+.agent/
+GEMINI.md
+*.env
+*.csv
+*.log
+.preview_url.txt
+
+# Local bridge & internal docs
 line-bridge/.env
 line-bridge/logs/
 line-bridge/__pycache__/
-.preview_url.txt
 
 # OS & editor files
 .DS_Store
 *.pyc
+line-bridge/
