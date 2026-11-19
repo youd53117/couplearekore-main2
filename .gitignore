@@ -1,6 +1,8 @@
 # 厳重セキュリティ・GitHub公開防止除外リスト
 tiktok-data/
 tiktok-session/
+muse-session/
+rakuten-session/
 scripts/
 .agent/
 GEMINI.md
@@ -18,3 +20,5 @@ line-bridge/__pycache__/
 .DS_Store
 *.pyc
 line-bridge/
+discord-bridge/
+.discord-bridge/

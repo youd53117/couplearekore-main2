@@ -428,3 +428,199 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ==========================================================================
+   First-View Seasonal Feature Banner & Pair Ring Comparison Table
+   ========================================================================== */
+.xmas-editorial-banner {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F7F2EC 58%, #F3EAE4 100%);
+    border: 1px solid #DFD4C7;
+    border-top: 3px solid var(--accent-rose);
+    border-radius: 12px;
+    padding: 1.35rem 1.25rem;
+    margin-bottom: 1.75rem;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .xmas-editorial-banner {
+        padding: 1.75rem 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+}
+
+.xmas-season-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    background-color: var(--text-charcoal);
+    color: #FFFFFF;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    padding: 0.28rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.xmas-quick-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    background-color: var(--cta-black);
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.65rem 1.15rem;
+    border-radius: 8px;
+    transition: background-color 0.25s ease;
+}
+
+.xmas-quick-link:hover {
+    background-color: var(--cta-black-hover);
+}
+
+.xmas-quick-link-sub {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    background-color: #FFFFFF;
+    color: var(--text-charcoal);
+    border: 1px solid var(--accent-beige);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.65rem 1.15rem;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.xmas-quick-link-sub:hover {
+    background-color: var(--bg-info);
+    border-color: var(--text-charcoal);
+}
+
+.comparison-section {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2.75rem;
+}
+
+.comparison-header {
+    background-color: var(--bg-info);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1.1rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .comparison-header {
+        padding: 1.25rem 1.75rem;
+    }
+}
+
+.comparison-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .comparison-table {
+        min-width: 100%;
+    }
+}
+
+.comparison-table thead th {
+    background-color: #FAF8F5;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.75rem 0.65rem;
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+}
+
+.comparison-table tbody td {
+    padding: 0.9rem 0.65rem;
+    border-bottom: 1px solid #F0EBE4;
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: var(--text-charcoal);
+    vertical-align: middle;
+}
+
+.comparison-table tbody td:first-child {
+    min-width: 128px;
+}
+
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-row-featured {
+    background-color: #FCF9F5;
+}
+
+.comparison-item-tag {
+    display: inline-block;
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--text-charcoal);
+    background-color: var(--bg-info);
+    border: 1px solid var(--border-subtle);
+    padding: 0.12rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.3rem;
+    white-space: nowrap;
+}
+
+.comparison-item-tag-accent {
+    background-color: #F4E6E2;
+    border-color: #E2C5BC;
+    color: #7D3F35;
+}
+
+.comparison-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    background-color: var(--cta-black) !important;
+    color: #FFFFFF !important;
+    font-size: 0.71rem;
+    font-weight: 600;
+    padding: 0.48rem 0.68rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: background-color 0.25s ease;
+}
+
+.comparison-cta-btn:hover {
+    background-color: var(--cta-black-hover) !important;
+}
+
+.comparison-jump-link {
+    display: inline-block;
+    margin-top: 0.38rem;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.comparison-jump-link:hover {
+    color: var(--text-charcoal);
+}
